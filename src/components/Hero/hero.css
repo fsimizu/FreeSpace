@@ -1,0 +1,29 @@
+.hero__container {
+    background-color: var(--light-blue);
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
+    padding-top: 42px;
+    padding-bottom: 42px;
+    min-height: 92vh;
+    /* border: 1px solid grey; */
+}
+
+/* .hero__text_container {
+    width: 90vw;
+    text-align: left;
+} */
+
+.hero__image_container {
+    /* width: 100%;
+    height: 100%; */
+    /* overflow: hidden; */
+    text-align: right;
+    /* border: 1px solid red; */
+}
+
+.hero__image_container img {
+    width: 90%;
+    /* object-fit: contain; */
+    
+
+}

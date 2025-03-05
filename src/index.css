@@ -1,0 +1,91 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+  --main-blue:#658cc2;
+  --darker-blue:#2e5caf;
+  --darkest-blue:#054bb4;
+  --light-blue: #D4DFEE;
+  --grey: #5d6169;
+  --white: #FEFDF9;
+
+
+
+  --padding-sides: 16px;
+}
+
+body {
+  margin: 0px;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.1;
+  font-weight: normal;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+/* ko-fi icon */
+.fa-ko-fi::before {
+  content: "\f0f4";
+  display: inline-block;
+  font-size: 1.1em;
+  line-height: 0.55em;
+  margin: -0.45em 0 0 -0.2em;
+  overflow-y: hidden;
+  padding-top: 0.45em;
+}
+.fa-ko-fi::after {
+  color: var(--white);
+  content: "\f004";
+  font-size: 50%;
+  font-weight: 900;
+  margin: 0.5em 0 0 -2em;
+  position: absolute;
+}
