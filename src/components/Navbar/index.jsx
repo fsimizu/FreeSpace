@@ -46,8 +46,8 @@ export function Navbar() {
           </Link>
           <div className="overlay__social-media">
             <div className="icon__social-media"><a href="https://www.facebook.com/HOOPPeru/" role="button"><i className="fab fa-facebook-f fa-md text-blue"></i></a></div>
-            <div className="icon__social-media"><a href="https://twitter.com/hoopperu?lang=en" role="button"><i className="fab fa-twitter fa-md"></i></a></div>
-            <div className="icon__social-media"><a href="https://www.youtube.com/channel/UC6bUtxZ6YRKtqPNjhYqfQIA" role="button"><i className="fab fas fa-ko-fi fa-md"></i></a></div>
+            <div className="icon__social-media"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-md"></i></a></div>
+            <div className="icon__social-media"><a href="https://ko-fi.com/fs_learn" role="button"><i className="fab fas fa-ko-fi fa-md"></i></a></div>
           </div>
         </div>
       </div>

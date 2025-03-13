@@ -19,10 +19,16 @@
   --light-blue: #D4DFEE;
   --grey: #5d6169;
   --white: #FEFDF9;
+  --green: #A3C9A8;
+  --yellow: #F2D388;
+  --purple: #8C6A9F;
+  --red: #E07A5F;
+  --orange:#F4A261;
 
 
 
-  --padding-sides: 16px;
+  --padding-sides: 1rem;
+  --padding-sections: 3rem 1.5rem;
 }
 
 body {
@@ -37,7 +43,8 @@ h1 {
   font-weight: normal;
 }
 
-button {
+
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -54,7 +61,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -77,7 +84,7 @@ button:focus-visible {
   display: inline-block;
   font-size: 1.1em;
   line-height: 0.55em;
-  margin: -0.45em 0 0 -0.2em;
+  margin: -0.45em 0 -0.1rem -0.1em;
   overflow-y: hidden;
   padding-top: 0.45em;
 }
@@ -88,4 +95,33 @@ button:focus-visible {
   font-weight: 900;
   margin: 0.5em 0 0 -2em;
   position: absolute;
+}
+
+
+.action_hover a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+  padding-bottom: 4px;
+}
+
+.action_hover a:hover {
+  color: inherit;
+  border-bottom: 2px solid black;
+}
+
+.action_hover a i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.action_hover a:hover i {
+  transform: translateX(5px); /* Moves arrow 5px to the right */
+  color: var(--orange)
+}
+
+.action_hover .fa-arrow-right {
+  color: var(--main-blue);
+  margin-left: 5px;
 }

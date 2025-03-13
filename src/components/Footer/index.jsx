@@ -39,8 +39,9 @@ export function Footer() {
             <div className="footer__email">
                 <i className="fa-regular fa-envelope"></i>
                 <h6>Email</h6>
-                <p>freespace@vizarsolutions.com</p>
+                <a href="mailto:freespace@vizarsolutions.com?subject=Hello"><p>freespace@vizarsolutions.com</p></a>
             </div>
+
 
             <div className="col-12 col-lg-4 footer__social">
                 <div className="footer__icon"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-lg"></i></a></div>

@@ -5,16 +5,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: var(--padding-sections) ;
 }
 
 .footer__links h5, .footer__links div{
     margin-top: 1rem;
 }
 
-.footer__links div, .footer__email p {
-    color: var(--grey)
+.footer__links div, .footer__email a {
+    color: var(--grey);
+    text-decoration: none;
 }
 .footer__links div:hover, 
 .footer__links div:focus {
@@ -22,7 +22,9 @@
 }
 
 .footer__container a:hover,
-.footer__container a:focus {
+.footer__container a:focus,
+.footer__email a:hover,
+.footer__email a:focus {
     color: var(--main-blue) !important;
 }
 
@@ -70,6 +72,11 @@
     height: 45px;
     width: 45px;
 }
+
+.footer__icon i:hover {
+color: var(--main-blue);
+}
+
 
 
 .footer__copyright p {

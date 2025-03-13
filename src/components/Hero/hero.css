@@ -1,9 +1,7 @@
 .hero__container {
     background-color: var(--light-blue);
-    padding-left: var(--padding-sides);
-    padding-right: var(--padding-sides);
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding: var(--padding-sections); 
+    padding-top: 0px; 
     min-height: 92vh;
     /* border: 1px solid grey; */
 }
@@ -19,11 +17,34 @@
     /* overflow: hidden; */
     text-align: right;
     /* border: 1px solid red; */
+    margin-top: 40px;
 }
 
 .hero__image_container img {
     width: 90%;
     /* object-fit: contain; */
-    
 
+}
+
+.hero__action_button {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hero__action_button button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--main-blue);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hero__action_button button:hover {
+    background-color: var(--main-blue);
+    border: 2px solid var(--main-blue);
+    transition: background-color 0.5s ease-in-out;
+    color: black;
 }

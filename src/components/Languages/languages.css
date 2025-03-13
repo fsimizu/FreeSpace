@@ -1,4 +1,11 @@
 .languages__container {
     /* border: 1px solid red; */
     background-color: azure;
+    padding: var(--padding-sections);
+    text-align: center;
+}
+
+
+.languages__more {
+    margin-top: 40px;
 }

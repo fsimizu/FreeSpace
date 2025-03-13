@@ -15,6 +15,10 @@ export function Hero() {
         <img src="src/assets/images/woman_hero.png" alt="" />
       </div>
 
+      <div className="hero__action_button">
+        <button className="btn btn-primary"><h6>Start practicing</h6></button>
+      </div>
+
     </div>
   )
 }
