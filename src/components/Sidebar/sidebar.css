@@ -1,6 +1,5 @@
 .sidebar {
     width: 200px;
-    /* height: 100vh; */
     background-color: #f0f0f0;
     padding: 20px;
     transition: width 0.3s ease;
@@ -37,21 +36,24 @@
     background-color: #0056b3;
   }
   
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .sidebar {
-      display: none;
+      width: 0px;
+      padding: 0px
     }
-  } */
+  }
+
 
   /* When sidebar is overlayed */
 .sidebar.sideOverlay {
   position: absolute;
   top: 0;
   left: 0;
-  /* transform: translateX(-50%); */
-  width: 200px; /* Can be adjusted */
-  z-index: 1000;
-  /* background: rgba(240, 240, 240, 0.95); */
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
-  /* padding: 20px; */
+  width: 200px;
+  z-index: 80;
+  /* transition: width 0s ease-in; */
+}
+
+.sidebar:not(.sideOverlay) {
+  transition: none;
 }

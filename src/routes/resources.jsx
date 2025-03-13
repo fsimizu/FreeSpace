@@ -1,10 +1,11 @@
 import React from "react";
-import { Layout } from "../layout/Layout.jsx";
-import { Sidebar } from "../components/Sidebar/index.jsx";
-import { Breadcrumb } from "../components/Breadcrumb/breadcrumb.jsx";
-
 import { useLocation } from 'react-router-dom';
+import { Breadcrumb } from "../components/Breadcrumb/breadcrumb.jsx";
 import { ResourcesContainer } from "../components/ResourcesContainer/index.jsx";
+import { Layout } from "../layout/Layout.jsx";
+import { generateBreadcrumbItems } from "../utils/functions.js";
+
+
 
 export function Resources() {
 
@@ -16,20 +17,8 @@ export function Resources() {
     <div>
       <Layout>
         <Breadcrumb items={breadcrumbItems} />
-        <ResourcesContainer/>
+        <ResourcesContainer />
       </Layout>
     </div>
   );
-}
-
-function generateBreadcrumbItems(pathname) {
-  const items = [];
-  const paths = pathname.split('/').filter((path) => path !== '');
-
-  paths.forEach((path, index) => {
-    const link = '/' + paths.slice(0, index + 1).join('/');
-    items.push({ name: path.charAt(0).toUpperCase() + path.slice(1), link });
-  });
-
-  return items;
 }

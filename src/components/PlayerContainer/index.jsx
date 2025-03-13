@@ -4,7 +4,7 @@ import { Video } from "../Video";
 import './playerContainer.css';
 
 export function PlayerContainer({ buttons }) {
-  const [videoUrl, setVideoUrl] = useState("https://www.youtube.com/embed/Ay9KOwvtSx8");
+  const [videoUrl, setVideoUrl] = useState(`${buttons.video_1.url}`);
 
   const [isSidebarOverlay, setIsSidebarOverlay] = useState(false);
 

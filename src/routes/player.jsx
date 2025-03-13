@@ -1,19 +1,19 @@
 import React from "react";
-import { useState } from "react";
-import { Layout } from "../layout/Layout.jsx";
-import { Sidebar } from "../components/Sidebar/index.jsx";
-import { Video } from "../components/Video/index.jsx";
+import { useLocation } from 'react-router-dom';
+import { Breadcrumb } from "../components/Breadcrumb/breadcrumb.jsx";
 import { PlayerContainer } from "../components/PlayerContainer/index.jsx";
+import { Layout } from "../layout/Layout.jsx";
+import { generateBreadcrumbItems } from "../utils/functions.js";
 
-
-export function Player({buttons}) {
-  // const [videoUrl, setVideoUrl] = useState("https://www.youtube.com/embed/Ay9KOwvtSx8");
+export function Player({ buttons }) {
+  const location = useLocation();
+  const breadcrumbItems = generateBreadcrumbItems(location.pathname);
 
   return (
     <div>
       <Layout>
-        {/* <div>Here goes the player</div> */}
-        <PlayerContainer buttons={buttons}/>
+        <Breadcrumb items={breadcrumbItems} />
+        <PlayerContainer buttons={buttons} />
         <p>link to the script</p>
       </Layout>
     </div>

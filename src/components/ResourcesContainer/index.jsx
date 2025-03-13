@@ -5,14 +5,13 @@ import './resourcesContainer.css';
 export function ResourcesContainer() {
 
     return (
-        <div>
-
+        <div className='resourcesContainer'>
             <Resource resource={{
                 name: 'tips',
                 longName: 'Tips & Strategies'
             }}
             />
-                                    <Resource resource={{
+            <Resource resource={{
                 name: 'vocabulary',
                 longName: 'Vocabulary'
             }}
@@ -33,7 +32,7 @@ export function ResourcesContainer() {
                 longName: 'French'
             }}
             />
-                        <Resource resource={{
+            <Resource resource={{
                 name: 'portuguese',
                 longName: 'Portuguese'
             }}

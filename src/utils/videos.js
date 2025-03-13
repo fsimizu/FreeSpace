@@ -1,5 +1,6 @@
 export const buttons = {
     spanish: {
+      // language: 'Spanish',
       video_1: {
         name: 'Education',
         enabled: true,
