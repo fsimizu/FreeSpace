@@ -12,7 +12,7 @@ export function Hero() {
       </div>
 
       <div className="hero__image_container">
-        <img src="src/assets/images/woman_hero.png" alt="" />
+        <img src="/images/woman_hero.png" alt="" />
       </div>
 
       <div className="hero__action_button">

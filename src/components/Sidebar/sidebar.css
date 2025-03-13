@@ -37,8 +37,21 @@
     background-color: #0056b3;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .sidebar {
       display: none;
     }
-  }
+  } */
+
+  /* When sidebar is overlayed */
+.sidebar.sideOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateX(-50%); */
+  width: 200px; /* Can be adjusted */
+  z-index: 1000;
+  /* background: rgba(240, 240, 240, 0.95); */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+  /* padding: 20px; */
+}

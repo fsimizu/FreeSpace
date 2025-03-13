@@ -58,7 +58,7 @@ export function Navbar() {
         {/* Navbar mobile */}
         <div className="container-fluid align-items-end">
           <Link to="/">
-            <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}><img src="src/assets/images/logo.svg" alt="logo" /></div>
+            <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}><img src="/images/logo.svg" alt="logo" /></div>
           </Link>
           <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" ></span>

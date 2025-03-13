@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SidebarButton } from '../SidebarButton/sidebarButton';
 import './sidebar.css';
 
-export function Sidebar({ setVideoUrl, buttons }) {
+export function Sidebar({ setVideoUrl, buttons, isOverlay  }) {
   const [isCompact, setIsCompact] = useState(false);
 
   const toggleCompact = () => {
@@ -10,7 +10,7 @@ export function Sidebar({ setVideoUrl, buttons }) {
   };
 
   return (
-    <div className={`sidebar ${isCompact ? 'compact' : ''}`}>
+    <div className={`sidebar ${isCompact ? 'compact' : ''} ${isOverlay ? 'sideOverlay' : ''}`}>
       <button className="toggle-button" onClick={toggleCompact}>
         {isCompact ? 'Expand' : 'Compact'}
       </button>

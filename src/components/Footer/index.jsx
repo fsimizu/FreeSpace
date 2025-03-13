@@ -10,7 +10,7 @@ export function Footer() {
     return (
         <div className="footer__container">
             <Link to="/">
-                <div className="footer__logo" onClick={() => { handleScroll('heroHome') }}><img src="src/assets/images/logo.svg" alt="logo" /></div>
+                <div className="footer__logo" onClick={() => { handleScroll('heroHome') }}><img src="/images/logo.svg" alt="logo" /></div>
             </Link>
 
             <div className="footer__links">
