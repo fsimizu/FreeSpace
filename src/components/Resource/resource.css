@@ -1,21 +1,44 @@
 .resource__container {
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #DFDFDF;
 }
+.resource__container .card-title{
+    margin-bottom: 15px;
+}
+.resource__container .card-text{
+    margin-bottom: 0px;
+}
+
+
 .resource-img {
-    display: block;
+    display: none;
     width: 120px;
     height: 102px;
 }
 
-
-@media (max-width: 768px) {
-.resource-img {
-    display: none;
-
+.resource__container hr{
+    color: #A4A4A4
 }
 
-  }
+
+
+
+@media (min-width: 768px) {
+    
+    .resource__container {
+        flex-direction: row;
+    }
+
+    .resource-img {
+        display: block;
+        width: 120px;
+        height: 102px;
+    }
+
+}

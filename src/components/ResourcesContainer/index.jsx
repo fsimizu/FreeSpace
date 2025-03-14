@@ -6,6 +6,8 @@ export function ResourcesContainer() {
 
     return (
         <div className='resourcesContainer'>
+            <h3>Resources</h3>
+
             <Resource resource={{
                 name: 'tips',
                 longName: 'Tips & Strategies'

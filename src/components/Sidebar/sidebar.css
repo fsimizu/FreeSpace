@@ -1,10 +1,13 @@
 .sidebar {
-    width: 200px;
-    background-color: #f0f0f0;
+    width: 300px;
+    /* background-color: #f0f0f0; */
+    background-color: white;
     padding: 20px;
     transition: width 0.3s ease;
     display: flex;
     flex-direction: column;
+    /* max-height: 100%; */
+    /* overflow-y: scroll; */
   }
   
   .sidebar.compact {
@@ -17,11 +20,7 @@
     padding: 0;
     margin: 0;
   }
-  
-  .sidebar li {
-    margin-bottom: 10px;
-  }
-  
+    
   .toggle-button {
     width: 100%;
     padding: 10px;
@@ -41,7 +40,11 @@
       width: 0px;
       padding: 0px
     }
+    .sidebar .toggle-button {
+      display: none;
+    }
   }
+
 
 
   /* When sidebar is overlayed */
@@ -49,8 +52,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 100%;
   z-index: 80;
+  height: 100%
   /* transition: width 0s ease-in; */
 }
 

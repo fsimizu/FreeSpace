@@ -1,0 +1,19 @@
+.sidebar__button {
+    cursor: pointer;
+    padding: var(--padding-sections);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow */
+    text-overflow: ellipsis; /* Adds "..." when text overflows */
+
+}
+
+.sidebar__button:hover {
+    background-color: var(--light-blue);
+    border-left: 4px solid var(--main-blue);
+    padding-left: 17px;
+}

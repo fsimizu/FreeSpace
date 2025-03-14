@@ -1,6 +1,30 @@
+.player__container{
+    padding: var(--padding-sections);
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .player__content {
     display: flex;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.videos__button {
+    border: none;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+.videos__button-more{
+font-size: 0.8rem;
+margin-right: 8px;
+}
+
+.videos__button:hover {
+    background-color: var(--light-blue);
+    text-decoration: underline;
+
 }
 
 /* @media (max-width: 768px) {

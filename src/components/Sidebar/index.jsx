@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SidebarButton } from '../SidebarButton/sidebarButton';
 import './sidebar.css';
 
-export function Sidebar({ setVideoUrl, buttons, isOverlay  }) {
+export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }) {
   const [isCompact, setIsCompact] = useState(false);
 
   const toggleCompact = () => {
@@ -17,13 +17,13 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay  }) {
 
       <ul>
         <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_1}/>
+          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_1} setIsSidebarOverlay={setIsSidebarOverlay}/>
         </li>
         <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_2}/>
+          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_2} setIsSidebarOverlay={setIsSidebarOverlay}/>
         </li>
         <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3}/>
+          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3} setIsSidebarOverlay={setIsSidebarOverlay}/>
         </li>
 
       </ul>

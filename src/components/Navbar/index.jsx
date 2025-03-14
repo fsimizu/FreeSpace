@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { handleScroll } from "../../utils/functions";
+import { useState, useEffect } from "react";
+
 
 import './navbar.css';
 
@@ -8,10 +10,13 @@ export function Navbar() {
 
   const handleCloseClick = () => {
     document.getElementById("myNav").style.height = "0%";
+    setIsOverlayActive(!isOverlayActive);
   };
 
   const handleOpenClick = () => {
+    // console.log('click!')
     document.getElementById("myNav").style.height = "100%";
+    setIsOverlayActive(!isOverlayActive);
   };
 
 
@@ -25,7 +30,18 @@ export function Navbar() {
   // }, 250)
   // });
 
+  const [isOverlayActive, setIsOverlayActive] = useState(false);
 
+  useEffect(() => {
+    if (isOverlayActive) {
+      document.body.style.overflow = "hidden"; // Disable scroll
+    } else {
+      document.body.style.overflow = "auto"; // Restore scroll
+    }
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup when unmounting
+    };
+  }, [isOverlayActive]);
 
   return (
 
@@ -52,6 +68,7 @@ export function Navbar() {
         </div>
       </div>
 
+
       {/* Navbar */}
       <nav className="navbar">
 
@@ -70,7 +87,7 @@ export function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/">
-                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>About us</div>
+                <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>About us</div>
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -95,7 +112,7 @@ export function Navbar() {
             </li>
             <li className="nav-item">
               <Link to="/">
-                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
               </Link>
             </li>
 
