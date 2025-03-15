@@ -1,5 +1,6 @@
 import React from "react";
 import './hero.css';
+import { Link } from 'react-router-dom';
 
 export function Hero() {
 
@@ -15,9 +16,9 @@ export function Hero() {
         <img src="/images/woman_hero.png" alt="" />
       </div>
 
-      <div className="hero__action_button">
+      <Link to={`/resources`} className="hero__action_button">
         <button className="btn btn-primary"><h6>Start practicing</h6></button>
-      </div>
+      </Link>
 
     </div>
   )

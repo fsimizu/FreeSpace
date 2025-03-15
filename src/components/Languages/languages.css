@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+.languages__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
 .languages__more {
     margin-top: 40px;

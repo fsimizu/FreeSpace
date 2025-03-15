@@ -24,6 +24,7 @@
   --purple: #8C6A9F;
   --red: #E07A5F;
   --orange:#F4A261;
+  --black: #121212;
 
 
 
@@ -100,7 +101,7 @@ button:focus-visible {
 
 .action_hover a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
   display: inline-block;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease-in-out;
@@ -109,7 +110,7 @@ button:focus-visible {
 
 .action_hover a:hover {
   color: inherit;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--black);
 }
 
 .action_hover a i {

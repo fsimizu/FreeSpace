@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Breadcrumb } from "../components/Breadcrumb/breadcrumb.jsx";
 import { PlayerContainer } from "../components/PlayerContainer/index.jsx";
 import { Layout } from "../layout/Layout.jsx";
+import { Instructions } from "../components/Instructions/index.jsx";
 import { generateBreadcrumbItems } from "../utils/functions.js";
 
 export function Player({ buttons }) {
@@ -14,7 +15,8 @@ export function Player({ buttons }) {
       <Layout>
         <Breadcrumb items={breadcrumbItems} />
         <PlayerContainer buttons={buttons} />
-        <p>link to the script</p>
+        <Instructions />
+        {/* <p>link to the script</p> */}
       </Layout>
     </div>
   );

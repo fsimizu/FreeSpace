@@ -6,10 +6,7 @@
     /* border: 1px solid grey; */
 }
 
-/* .hero__text_container {
-    width: 90vw;
-    text-align: left;
-} */
+
 
 .hero__image_container {
     /* width: 100%;
@@ -31,20 +28,25 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    text-decoration: none;
 }
 
 .hero__action_button button {
     width: 100%;
-    background-color: transparent;
-    border: 2px solid var(--main-blue);
-    color: black;
+    /* background-color: transparent; */
+    background-color: var(--green);
+    /* border: 2px solid var(--main-blue); */
+    border: none;
+    color: var(--black);
     padding: 10px;
     border-radius: 10px;
 }
 
 .hero__action_button button:hover {
-    background-color: var(--main-blue);
-    border: 2px solid var(--main-blue);
-    transition: background-color 0.5s ease-in-out;
-    color: black;
+    /* background-color: var(--orange) 0.5; */
+    background-color: var(--green);
+    /* border: 2px solid var(--main-blue); */
+    transition: filter 0.3s ease-in-out;
+    filter: brightness(110%);
+    color: var(--black);
 }

@@ -7,30 +7,30 @@ export function LanguageCard({ language }) {
     // const [isDragging, setIsDragging] = useState(false);
 
     return (
-        <div
-            style={{ backgroundColor: language.color, userSelect: "none" }}
-            className="card"
-            // onMouseDown={() => setIsDragging(false)} // Reset dragging state on click
-            
-            // onMouseMove={() => setIsDragging(true)} // Detect dragging
-            // onMouseUp={(e) => {
-            //     if (isDragging) {
-            //         e.preventDefault(); // Prevent link navigation when dragging
-            //     }
-            // }}
-        >
-            <Link
-                to={`/resources/${language.short}`}
-                onMouseUp={(e) => e.preventDefault()}
-                draggable="false" // Prevents the <a> from being dragged
+        <div className="language__card-container">
+            <div
+                style={{ backgroundColor: language.color }}
+                className="card language__card"
             >
-                <div className="card-body">
-                    <div>FLAG ICON</div>
-                    <h4>{language.name}</h4>
+                <div className="card-inner">
+                    <div className="card-front">
+                        <div className="card-body">
+                            <div>FLAG ICON</div>
+                            <h4>{language.name}</h4>
+                        </div>
+                    </div>
+                    <div className="card-back">
+                        <div className="card-body">
+                            <p>More details about {language.name}</p>
 
+                            <Link to={`/resources/${language.name}`} className="btn btn-primary">
+                                {language.go}
+                            </Link>
+
+                        </div>
+                    </div>
                 </div>
-            </Link>
-
-        </div>
+            </div>
+        </div >
     )
 }

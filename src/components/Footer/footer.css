@@ -62,7 +62,7 @@
 }
 
 .footer__container .fab {
-    color: black;
+    color: var(--black);
     /* color: var(--darkest-blue); */
 }
 

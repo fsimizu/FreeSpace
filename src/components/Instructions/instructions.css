@@ -1,0 +1,5 @@
+.instructions__container {
+    padding: var(--padding-sections);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

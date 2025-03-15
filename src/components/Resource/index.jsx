@@ -9,7 +9,7 @@ export function Resource({ resource }) {
       {/* <div className="resource-body"> */}
 
       <h5 className="card-title">{resource.longName}</h5>
-      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p className="card-text">{resource.description}</p>
       <hr />
       <Link to={`/resources/${resource.name}`} className="btn btn-primary">
         Go to videos

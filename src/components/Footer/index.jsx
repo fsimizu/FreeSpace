@@ -18,20 +18,20 @@ export function Footer() {
                     <Link to="/about-us">
                         <h5>About us</h5>
                     </Link>
-                    <Link to="/">
+                    <Link to="https://ko-fi.com/fs_learn">
                         <div>Buy us a coffee</div>
                     </Link>
                     <Link to="/resources">
                         <h5>Resources</h5>
                     </Link>
-                    <Link to="/">
-                        <div>Languages</div>
-                    </Link>
-                    <Link to="/">
-                        <div>Vocabulary</div>
-                    </Link>
-                    <Link to="/">
+                    <Link to="/resources/tips">
                         <div>Tips & Strategies</div>
+                    </Link>
+                    <Link to="/resources">
+                        <div>Mock tests</div>
+                    </Link>
+                    <Link to="/resources/vocabulary">
+                        <div>Vocabulary</div>
                     </Link>
                 </ul>
             </div>

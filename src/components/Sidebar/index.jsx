@@ -11,22 +11,39 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
 
   return (
     <div className={`sidebar ${isCompact ? 'compact' : ''} ${isOverlay ? 'sideOverlay' : ''}`}>
-      <button className="toggle-button" onClick={toggleCompact}>
-        {isCompact ? 'Expand' : 'Compact'}
-      </button>
 
-      <ul>
-        <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_1} setIsSidebarOverlay={setIsSidebarOverlay}/>
-        </li>
-        <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_2} setIsSidebarOverlay={setIsSidebarOverlay}/>
-        </li>
-        <li>
-          <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3} setIsSidebarOverlay={setIsSidebarOverlay}/>
-        </li>
+      <div className="toggle-button" onClick={toggleCompact}>
+        {isCompact ? (
+          <i className="fa-solid fa-bars"></i>
+        ) : (
+          <>
+            <i className="fa-solid fa-bars"></i><span> Hide menu</span>
+          </>
+        )}
+      </div>
 
-      </ul>
+      <div>
+
+
+        {isCompact ? (
+          ""
+        ) : (
+          <div>
+            <ul>
+              <li>
+                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_1} setIsSidebarOverlay={setIsSidebarOverlay} />
+              </li>
+              <li>
+                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_2} setIsSidebarOverlay={setIsSidebarOverlay} />
+              </li>
+              <li>
+                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3} setIsSidebarOverlay={setIsSidebarOverlay} />
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
+
 
 
     </div>
