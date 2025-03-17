@@ -4,7 +4,7 @@ import './instructions.css';
 
 export function Instructions() {
 
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(true);
 
 
     return (

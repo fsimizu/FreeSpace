@@ -19,7 +19,7 @@
 .videos__button-more{
 font-size: 0.8rem;
 margin-right: 8px;
-color: var(--black)
+color: var(--black) !important ;
 }
 
 .videos__button:hover {

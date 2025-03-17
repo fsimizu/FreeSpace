@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SidebarButton } from '../SidebarButton/sidebarButton';
 import './sidebar.css';
 
@@ -8,6 +8,19 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
   const toggleCompact = () => {
     setIsCompact(!isCompact);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsCompact(false);
+      }};
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={`sidebar ${isCompact ? 'compact' : ''} ${isOverlay ? 'sideOverlay' : ''}`}>
@@ -23,8 +36,6 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
       </div>
 
       <div>
-
-
         {isCompact ? (
           ""
         ) : (
