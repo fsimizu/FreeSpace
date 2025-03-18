@@ -1,6 +1,6 @@
 .hero__container {
     min-height: 500px;
-    height: 100vh;
+    height: 98vh;
     position: relative;
     /* display: flex;
     flex-direction: column; */
@@ -14,64 +14,40 @@
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, var(--white) 70%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 45%, var(--white) 75%),
         url("/images/hero_background_2.jpg");
     background-size: cover;
-    background-position: top left;
+    background-position: top right;
     /* filter: brightness(0.3);  */
     /* z-index: -1; */
     
 }
 
 
-/* .hero__background { */
-    /* background-image: url("/images/hero_background.jpg"); */
-    /* background-size: cover; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* filter: brightness(40%); */
-    /* position: absolute; */
-    /* height: 100%; */
-    /* width: 100%; */
-    /* z-index: -1; */
-/* } */
-
 .hero__content {
-    /* background-color: var(--light-blue); */
     padding: var(--padding-sections);
-    /* padding-top: 0; */
-    /* background-color: transparent !important; */
     color: var(--black);
     position: relative; 
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
-    /* align-items: end; */
-    /* border: 1px solid red; */
     
 }
-.hero__text_container{
-    /* background-color: none !important; */
-    /* z-index: 1; */
-    margin-top: 30px;
+
+.hero__text_container h1{
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.hero__text_container div{
+    line-height: 1.8;
+}
+
+/* .hero__text_container{ */
+    /* margin-top: 30px; */
     /* flex-grow: 2; */
-}
+/* } */
 
-.hero__image_container {
-    /* width: 100%;
-    height: 100%; */
-    /* overflow: hidden; */
-    text-align: right;
-    /* border: 1px solid red; */
-    margin-top: 40px;
-}
-
-.hero__image_container img {
-    width: 90%;
-    /* object-fit: contain; */
-
-}
 
 .hero__action_button {
     /* border: 1px solid red; */
@@ -82,9 +58,9 @@
 }
 
 .hero__action_button button {
-    width: 100%;
+    width: 50%;
     border: none;
-    color: var(--black);
+    color: var(--white);
     padding: 10px;
     border-radius: 10px;
 }

@@ -14,7 +14,7 @@ export function Hero() {
         </div>
 
         <Link to={`/resources`} className="hero__action_button button_primary">
-          <button className="btn btn-primary"><h6>Start practicing</h6></button>
+          <button className="btn btn-primary"><div>Start Now</div></button>
         </Link>
 
         {/* <Link to={`/resources`} className="hero__action_button button_secondary">
