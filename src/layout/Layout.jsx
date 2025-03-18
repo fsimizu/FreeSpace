@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer';
 
 export const Layout = ({children}) =>{
     return(
-        <div>
+        <div style={{ position: "relative" }}>
             <Navbar />
             {children}
             <Footer />

@@ -8,13 +8,13 @@ import { Subscribe } from "../components/Subscribe";
 export function Root() {
 
   return (
-    <div>
+    <>
       <Layout>
         <Hero />
         <AboutUs />
         <Languages />
         <Subscribe />
       </Layout>
-    </div>
+    </>
   );
 }

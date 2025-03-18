@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { handleScroll } from "../../utils/functions";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 import './navbar.css';
@@ -43,10 +43,34 @@ export function Navbar() {
     };
   }, [isOverlayActive]);
 
+
+
+  const [isSticky, setIsSticky] = useState(false);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsSticky(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
+    }
+
+    return () => {
+      if (triggerRef.current) {
+        observer.unobserve(triggerRef.current);
+      }
+    };
+  }, []);
+
   return (
+<>
 
     <div className="navbar__container">
-
       {/* Overlay */}
       <div id="myNav" className="overlay" >
         <a /*href="javascript:void(0)"*/ className="closebtn" onClick={handleCloseClick}>&times;</a>
@@ -70,17 +94,21 @@ export function Navbar() {
 
 
       {/* Navbar */}
-      <nav className="navbar">
+      
+      <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}>
 
         {/* Navbar mobile */}
         <div className="container-fluid align-items-end">
           <Link to="/">
             <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}><img src="/images/logo.svg" alt="logo" /></div>
+            
           </Link>
           <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" ></span>
           </button>
+          
         </div>
+        
 
         {/* Navbar web */}
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -119,9 +147,11 @@ export function Navbar() {
 
           </ul>
         </div>
-
       </nav>
+        <div ref={triggerRef}></div>
 
     </div>
+    
+    </>
   )
 }
