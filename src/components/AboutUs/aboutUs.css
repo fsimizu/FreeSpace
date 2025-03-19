@@ -1,0 +1,19 @@
+.aboutUs__container {
+    padding: var(--padding-sections);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.about__text_container {
+    margin-bottom: 40px;
+}
+
+.about__image_container img {
+    width: 100%;
+    border-radius: 20px;
+    border: 12px solid var(--main-blue);
+    margin-bottom: 20px;
+    filter: saturate(0.8)
+}
