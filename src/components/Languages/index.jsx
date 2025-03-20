@@ -43,7 +43,7 @@ export function Languages() {
   return (
     <div className="languages__container">
       <div className="languages__title">
-        <h2>Learn, Speak, Connect</h2>
+        <h2>Learn, <strong>Speak</strong>, Connect</h2>
         <p>Explore our available languages and see what’s coming next!</p>
       </div>
 

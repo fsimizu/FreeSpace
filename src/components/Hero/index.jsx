@@ -17,10 +17,7 @@ export function Hero() {
           <button className="btn btn-primary"><div>Start Now</div></button>
         </Link>
 
-        {/* <Link to={`/resources`} className="hero__action_button button_secondary">
-          <button className="btn btn-primary"><h6>Choose your language</h6></button>
-        </Link> */}
-        
+
       </div>
 
     </div>

@@ -1,11 +1,14 @@
 import React from "react";
 import './footer.css';
 import { Link } from 'react-router-dom';
-import { handleScroll } from "../../utils/functions";
+import { scrollTo } from "../../utils/functions";
 
 
 export function Footer() {
 
+    const handleScroll = (id) => {
+        setTimeout(() => { scrollTo(id) }, 200);
+    };
 
     return (
         <div className="footer__container">

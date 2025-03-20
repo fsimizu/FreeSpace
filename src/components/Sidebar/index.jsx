@@ -50,6 +50,9 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
               <li>
                 <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3} setIsSidebarOverlay={setIsSidebarOverlay} />
               </li>
+              <li>
+                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_4} setIsSidebarOverlay={setIsSidebarOverlay} />
+              </li>
             </ul>
           </div>
         )}

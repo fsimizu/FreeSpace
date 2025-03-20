@@ -20,7 +20,9 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
                     {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </div>
             </div>
-            {isExpanded && <p>{card.description}</p>}
+            <div className={`aboutUsCard__content ${isExpanded ? 'expanded' : ''}`}>
+                {isExpanded && <p>{card.description}</p>}
+            </div>
         </div>
     )
 }

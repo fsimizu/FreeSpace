@@ -9,13 +9,18 @@ export function LanguageCard({ language }) {
     return (
         <div className="language__card-container">
             <div
-                style={{ backgroundColor: language.color }}
+                // style={{ backgroundColor: language.color }}
                 className="card language__card"
             >
                 <div className="card-inner">
-                    <div className="card-front">
+                    <div className="card-front"
+                        style={{ 
+                            backgroundImage: `url(${language.imgUrl})`,
+
+                        }}
+                    >
                         <div className="card-body">
-                            <div>FLAG ICON</div>
+                            {/* <div>FLAG ICON</div> */}
                             <h4>{language.name}</h4>
                         </div>
                     </div>

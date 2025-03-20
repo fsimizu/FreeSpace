@@ -9,9 +9,9 @@ export function Resource({ resource }) {
       {/* <div className="resource-body"> */}
 
       <h5 className="card-title">{resource.longName}</h5>
-      <p className="card-text">{resource.description}</p>
+      {/* <p className="card-text">{resource.description}</p> */}
       <hr />
-      <Link to={`/resources/${resource.name}`} className="btn btn-primary">
+      <Link to={`/resources/${resource.name}`} className="btn btn-primary resource_button">
         Go to videos
       </Link>
 

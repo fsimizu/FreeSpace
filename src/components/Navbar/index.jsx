@@ -1,34 +1,29 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { handleScroll } from "../../utils/functions";
+import { Link, useLocation } from 'react-router-dom';
+import { scrollTo } from "../../utils/functions";
 import { useState, useEffect, useRef } from "react";
 
 
 import './navbar.css';
 
 export function Navbar() {
+  const location = useLocation();
+
+  const handleScroll = (id) => {
+    setTimeout(() => { scrollTo(id) }, 200);
+    handleCloseClick();
+};
 
   const handleCloseClick = () => {
     document.getElementById("myNav").style.height = "0%";
-    setIsOverlayActive(!isOverlayActive);
+    setIsOverlayActive(false);
   };
 
   const handleOpenClick = () => {
-    // console.log('click!')
     document.getElementById("myNav").style.height = "100%";
-    setIsOverlayActive(!isOverlayActive);
+    setIsOverlayActive(true);
   };
 
-
-  // $( function(){ setTimeout( ()=> {
-  //     let url = window.location.href; 
-  //     $(".nav-item .nav-link").each( function() {
-  //         if(url.includes(this.id.substring(4))) { 
-  //             $(this).addClass("nav-item-active");
-  //         }
-  //     });
-  // }, 250)
-  // });
 
   const [isOverlayActive, setIsOverlayActive] = useState(false);
 
@@ -68,90 +63,100 @@ export function Navbar() {
   }, []);
 
   return (
-<>
+    <>
 
-    <div className="navbar__container">
-      {/* Overlay */}
-      <div id="myNav" className="overlay" >
-        <a /*href="javascript:void(0)"*/ className="closebtn" onClick={handleCloseClick}>&times;</a>
-        <div className="overlay-content">
-          <Link to="/">
-            <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</div>
-          </Link>
-          <Link to="/about-us">
-            <div onClick={() => { handleCloseClick; handleScroll('heroCommon') }}>About us</div>
-          </Link>
-          <Link to="/resources">
-            <div onClick={() => { handleCloseClick }}>Resources</div>
-          </Link>
-          <div className="overlay__social-media">
-            <div className="icon__social-media"><a href="https://www.facebook.com/HOOPPeru/" role="button"><i className="fab fa-facebook-f fa-md text-blue"></i></a></div>
-            <div className="icon__social-media"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-md"></i></a></div>
-            <div className="icon__social-media"><a href="https://ko-fi.com/fs_learn" role="button"><i className="fab fas fa-ko-fi fa-md"></i></a></div>
+      <div className="navbar__container"
+        style={{
+          position: location.pathname === '/' ? 'absolute' : 'relative',
+          backgroundColor: location.pathname === '/' ? 'transparent' : 'var(--main-blue)',
+        }}>
+        {/* Overlay */}
+        <div id="myNav" className="overlay" >
+          <a /*href="javascript:void(0)"*/ className="closebtn" onClick={handleCloseClick}>&times;</a>
+          <div className="overlay-content">
+            <Link to="/">
+              <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</div>
+            </Link>
+            <Link to="/">
+              <div onClick={() => { handleCloseClick; handleScroll('aboutUs') }}>About us</div>
+            </Link>
+            <Link to="/resources">
+              <div onClick={() => { handleCloseClick; handleScroll('root') }}>Resources</div>
+            </Link>
+            <div className="overlay__social-media">
+              <div className="icon__social-media"><a href="https://www.facebook.com/HOOPPeru/" role="button"><i className="fab fa-facebook-f fa-md text-blue"></i></a></div>
+              <div className="icon__social-media"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-md"></i></a></div>
+              <div className="icon__social-media"><a href="https://ko-fi.com/fs_learn" role="button"><i className="fab fas fa-ko-fi fa-md"></i></a></div>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      {/* Navbar */}
-      
-      <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}>
+        {/* Navbar */}
 
-        {/* Navbar mobile */}
-        <div className="container-fluid align-items-end">
-          <Link to="/">
-            <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}><img src="/images/logo.svg" alt="logo" /></div>
-            
-          </Link>
-          <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon" ></span>
-          </button>
-          
-        </div>
-        
+        <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}>
 
-        {/* Navbar web */}
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/">
-                <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>About us</div>
-              </Link>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_about-us">Resources</a>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/about-us">
-                    <div className="dropdown-item" onClick={() => { handleScroll('heroCommon') }}><p>Mock tests</p></div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about-us">
-                    <div className="dropdown-item" onClick={() => { handleScroll('our-results') }}><p>Vocabulary</p></div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about-us">
-                    <div className="dropdown-item" onClick={() => { handleScroll('ourPurpose') }}><p>Tips & Strategies</p></div>
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <Link to="/">
-                <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
-              </Link>
-            </li>
+          {/* Navbar mobile */}
+          <div className="container-fluid align-items-end">
+            <Link to="/">
+              <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
+                <img src="/images/logo.svg" alt="logo"
+                  style={{
+                    border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
+                  }}
+                />
+              </div>
+
+            </Link>
+            <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon" ></span>
+            </button>
+
+          </div>
 
 
-          </ul>
-        </div>
-      </nav>
+          {/* Navbar web */}
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/">
+                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>About us</div>
+                </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_about-us">Resources</a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <Link to="/about-us">
+                      <div className="dropdown-item" onClick={() => { handleScroll('heroCommon') }}><p>Mock tests</p></div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about-us">
+                      <div className="dropdown-item" onClick={() => { handleScroll('our-results') }}><p>Vocabulary</p></div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about-us">
+                      <div className="dropdown-item" onClick={() => { handleScroll('ourPurpose') }}><p>Tips & Strategies</p></div>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <Link to="/">
+                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                </Link>
+              </li>
+
+
+            </ul>
+          </div>
+        </nav>
         <div ref={triggerRef}></div>
 
-    </div>
-    
+      </div>
+
     </>
   )
 }

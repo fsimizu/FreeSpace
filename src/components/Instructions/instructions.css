@@ -3,3 +3,9 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.instructions__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

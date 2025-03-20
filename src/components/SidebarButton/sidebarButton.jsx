@@ -4,16 +4,18 @@ export function SidebarButton({ setVideoUrl, buttons, setIsSidebarOverlay }) {
 
     return (
         <div
-            onClick={() => {
-                setVideoUrl(`${buttons.url}`)
-                setIsSidebarOverlay(false)
-            }}
-            enabled={buttons.active}
-            className='sidebar__button'
+
+            onClick={
+                buttons.enabled ? () => {
+                    setVideoUrl(`${buttons.url}`)
+                    setIsSidebarOverlay(false)
+                }
+                    : undefined
+            }
+
+            className={`sidebar__button ${buttons.enabled ? '' : 'disabled'}`}
         >
-
-            <strong>{buttons.type} #{buttons.order}:</strong> {buttons.name}
-
+            <strong>#{buttons.order}</strong>: {buttons.name}
         </div>
     )
 }

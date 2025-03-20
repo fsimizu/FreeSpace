@@ -4,13 +4,27 @@
     border-bottom: 1px solid lightgray;
     margin: 20px 0;
 }
+
 .aboutUsCard__title-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
 .aboutUsCard__title {
     background-color: var(--light-blue);
     padding: 5px 10px;
     border-radius: 8px;
 }
+
+/* .aboutUsCard__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, padding 0.3s ease;
+    padding: 0 0;
+}
+
+.aboutUsCard__content.expanded {
+    max-height: 500px;
+    padding: 10px 0;
+} */

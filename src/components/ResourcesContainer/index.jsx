@@ -10,7 +10,7 @@ export function ResourcesContainer() {
 
     return (
         <div className='resourcesContainer'>
-            <h3>Resources</h3>
+            <h2 className='resourcesContainer-title'>Resources</h2>
 
             <Resource resource={{
                 name: 'tips',
@@ -30,11 +30,11 @@ export function ResourcesContainer() {
                 <h5 onClick={() => setIsTestExpanded(!isTestExpanded)}  className="card-title">
                     Mock tests {isTestExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                 </h5>
-                <p className="card-text">
+                {/* <p className="card-text">
                     Put your skills to the test with realistic mock exams! Practice under real conditions, track your progress, and get ready to ace your next interpreting challenge.
-                </p>
+                </p> */}
                 <hr />
-                <div onClick={() => setIsTestExpanded(!isTestExpanded)} className="btn btn-primary">
+                <div onClick={() => setIsTestExpanded(!isTestExpanded)} className="btn btn-primary resource_button">
                     Select language
                 </div>
 

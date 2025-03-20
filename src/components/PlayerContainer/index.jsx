@@ -12,12 +12,24 @@ export function PlayerContainer({ buttons }) {
 
     <div className="player__container">
       <h2>{buttons.language} Mock Tests</h2>
-      
+
       <button className="videos__button"
         onClick={() => setIsSidebarOverlay(!isSidebarOverlay)}
       >
-        <i className="fa-solid fa-bars videos__button-more"></i>
-        Videos
+
+
+
+        {isSidebarOverlay ? (
+          <span>
+            <i class="fa-solid fa-x videos__button-more"></i>
+            Close
+          </span>
+        ) : (
+          <span>
+            <i className="fa-solid fa-bars videos__button-more"></i> Videos
+          </span>
+        )}
+
       </button>
 
       <div className="player__content">
@@ -28,8 +40,8 @@ export function PlayerContainer({ buttons }) {
           setIsSidebarOverlay={setIsSidebarOverlay} />
 
         {/* <div className="video-wrapper"> */}
-          {/* {loading && <div className="loading-spinner">Loading...</div>} */}
-          <Video videoUrl={videoUrl} onLoad={() => setLoading(false)} />
+        {/* {loading && <div className="loading-spinner">Loading...</div>} */}
+        <Video videoUrl={videoUrl} onLoad={() => setLoading(false)} />
         {/* </div> */}
 
       </div>
