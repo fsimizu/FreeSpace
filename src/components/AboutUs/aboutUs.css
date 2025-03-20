@@ -1,5 +1,6 @@
 .aboutUs__container {
     padding: var(--padding-sections);
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;

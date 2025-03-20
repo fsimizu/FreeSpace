@@ -2,6 +2,7 @@
     /* border: 1px solid red; */
     /* background-color: azure; */
     padding: var(--padding-sections);
+    padding-top: 20px;
     text-align: center;
 }
 

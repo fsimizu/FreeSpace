@@ -13,7 +13,7 @@ export function Root() {
         <Hero />
         <AboutUs />
         <Languages />
-        <Subscribe />
+        {/* <Subscribe /> */}
       </Layout>
     </>
   );

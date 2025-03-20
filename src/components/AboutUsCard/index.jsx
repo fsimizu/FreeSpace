@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from 'react-router-dom';
 import './aboutUsCard.css';
 
 export function AboutUsCard({ card, isExpanded, onToggle }) {
@@ -8,12 +9,12 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
 
     return (
         <div className="aboutUsCard__container">
-            <div className="aboutUsCard__title-container" 
-            onClick={() => {
-                if (!isExpanded) {
-                  onToggle(); 
-                }
-              }}
+            <div className="aboutUsCard__title-container"
+                onClick={() => {
+                    if (!isExpanded) {
+                        onToggle();
+                    }
+                }}
             >
                 <h6 className="aboutUsCard__title">{card.name}</h6>
                 <div>
@@ -21,7 +22,18 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
                 </div>
             </div>
             <div className={`aboutUsCard__content ${isExpanded ? 'expanded' : ''}`}>
-                {isExpanded && <p>{card.description}</p>}
+                {isExpanded &&
+                    <div>
+                        {card.description}
+
+                        <div className="action_hover">
+                            <Link to={`/resources/${card.shortName}`}>
+                                <h6>Go to videos <i className="fa-solid fa-arrow-right"></i></h6>
+                            </Link>
+                        </div>
+
+                    </div>
+                }
             </div>
         </div>
     )

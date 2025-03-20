@@ -14,9 +14,12 @@ export function LanguageCard({ language }) {
             >
                 <div className="card-inner">
                     <div className="card-front"
-                        style={{ 
+                        style={{
                             backgroundImage: `url(${language.imgUrl})`,
-
+                            borderImage: `linear-gradient(to right, ${language.color} 50%, var(--white) 0%)`,
+                            borderImageSlice: 1,
+                            borderWidth: '10px',
+                            borderStyle: 'solid',
                         }}
                     >
                         <div className="card-body">
@@ -24,7 +27,11 @@ export function LanguageCard({ language }) {
                             <h4>{language.name}</h4>
                         </div>
                     </div>
-                    <div className="card-back">
+                    <div className="card-back"
+                                            style={{
+                                                backgroundColor: language.color,
+                                            }}
+                    >
                         <div className="card-body">
                             <p>More details about {language.name}</p>
 

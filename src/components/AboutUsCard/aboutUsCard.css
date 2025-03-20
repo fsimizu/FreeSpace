@@ -28,3 +28,10 @@
     max-height: 500px;
     padding: 10px 0;
 } */
+
+.aboutUsCard__content .action_hover {
+    /* border: 1px solid red; */
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
