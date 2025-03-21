@@ -38,6 +38,13 @@ body {
   min-height: 100vh;
   background-color: var(--white);
   color: var(--black);
+/* 
+  display: flex;
+  justify-content: center; */
+}
+
+#root {
+  /* max-width: 1000px; */
 }
 
 h1 {

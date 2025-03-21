@@ -12,7 +12,7 @@
 }
 
 .aboutUsCard__title {
-    background-color: var(--light-blue);
+    /* background-color: var(--light-blue); */
     padding: 5px 10px;
     border-radius: 8px;
 }

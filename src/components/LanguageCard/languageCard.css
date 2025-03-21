@@ -1,17 +1,12 @@
 .language__card-container {
-   /* Creates depth effect */
    perspective: 1000px;
 }
 
 .language__card {
-   /* margin: 0 auto; */
    width: 200px;
    height: 200px !important;
    border: none !important;
    position: relative;
-   
-   /* border: 1px solid red !important ; */
-   /* overflow: hidden; */
 
 }
 
@@ -24,24 +19,16 @@
 
 }
 
-.language__card-container .card:hover .card-inner {
-   transform: rotateY(180deg);
-}
 
 .language__card-container .card-front,
 .language__card-container .card-back {
    width: 100%;
    height: 100%;
-   /* position: absolute; */
    backface-visibility: hidden;
    display: flex;
    justify-content: center;
    align-items: center;
-
-   border-radius: 10px;
-   /* overflow: hidden; */
-   /* border: 1px solid red */
-   
+   /* border-radius: 10px; */
 
 }
 
@@ -55,18 +42,18 @@
    align-items: flex-end;
    color: var(--white);
 
-   /* border: 10px solid red; */
-   /* border-image: linear-gradient(to right, red 50%, var(--white) 0%); */
-   /* border-image-slice: 1; */
- 
-   /* borderImage: `linear-gradient(to right, ${language.color} 50%, var(--white) 0%)`, 
-   borderImageSlice: 1,
-   borderWidth: '10px',
-   borderStyle: 'solid',  */
 }
-
-
 
 .language__card-container .card-back {
    transform: rotateY(180deg);
 }
+
+
+
+@media only screen and (min-width: 768px) {
+   
+   .language__card-container .card:hover .card-inner {
+      transform: rotateY(180deg);
+   }
+
+ }
