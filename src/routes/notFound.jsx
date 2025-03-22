@@ -1,5 +1,6 @@
-import React from "react";
+// import React from "react";
 import { Layout } from "../layout/Layout.jsx";
+import { NotFoundContainer } from "../components/NotFoundContainer/index.jsx";
 
 
 export function NotFound() {
@@ -7,7 +8,7 @@ export function NotFound() {
   return (
     <div>
       <Layout>
-<div>404 NOT FOUND DUDE</div>
+        <NotFoundContainer/>
       </Layout>
     </div>
   );

@@ -1,0 +1,44 @@
+.notFound__container {
+    padding: var(--padding-sections);
+}
+
+.notFount__404 {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.notFount__content {
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.notFound__image {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+
+    /* border: 1px solid red; */
+}
+
+
+.notFount__button {
+    background-color: var(--main-blue);
+    border: none;
+    width: 45%;
+    /* margin-bottom: 0; */
+}
+.notFount__button:hover {
+    background-color: var(--main-blue);
+    filter: brightness(120%);
+    transition: filter 0.3s ease-in-out;
+    /* color: var(--black); */
+    /* border: none; */
+}
+.notFount__text {
+    margin-bottom: 1rem;
+}
+.notFount__text p {
+    margin: 5px;
+}

@@ -5,18 +5,20 @@ export function Resource({ resource }) {
 
   return (
     <div className='resource__container'>
-      <img src="/images/woman_hero.png" className="resource-img" alt="..."></img>
-      {/* <div className="resource-body"> */}
+      <Link to={`/resources/${resource.name}`} className="resource_button">
+        <img src={`${resource.imgUrl}`} className="resource-img" alt=""></img>
+        <div className="resource_text">
+          <h6 className="card-title">{resource.longName}</h6>
+          <p className="card-text">{resource.description}</p>
+        </div>
 
-      <h5 className="card-title">{resource.longName}</h5>
-      {/* <p className="card-text">{resource.description}</p> */}
-      <hr />
-      <Link to={`/resources/${resource.name}`} className="btn btn-primary resource_button">
+
+        {/* <Link to={`/resources/${resource.name}`} className="btn btn-primary resource_button">
         Go to videos
+      </Link> */}
+
+        {/* </div> */}
       </Link>
-
-      {/* </div> */}
-
     </div>
   )
 }

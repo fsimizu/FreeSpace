@@ -1,39 +1,61 @@
 .resource__container {
     /* border: 1px solid grey; */
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin-bottom: 20px;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 10px;
     box-shadow: 1px 1px 5px #DFDFDF;
+    transition: all 0.3s ease;
 }
+
+.resource__container:hover {
+    transform: scale(1.02); /* Slightly scale up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bigger shadow for "sticking out" effect */
+  }
+
+.resource_button {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+}
+
+.resource_text {
+    /* border: 1px solid red; */
+}
+
 .resource__container .card-title{
     margin-bottom: 15px;
 }
 .resource__container .card-text{
     margin-bottom: 0px;
+    color: grey;
+    font-size: 0.8rem;
 }
 
 
 .resource-img {
-    display: none;
-    width: 120px;
-    height: 102px;
+    /* display: none; */
+    /* display: block; */
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    /* border: 1px solid red; */
 }
 
 .resource__container hr{
-    color: #A4A4A4
-}
-
-.resource_button {
-    width: 50%;
-    align-self: center;
+    /* color: #A4A4A4 */
 }
 
 
 
-@media (min-width: 768px) {
+
+
+/* @media (min-width: 768px) {
     
     .resource__container {
         flex-direction: row;
@@ -45,4 +67,4 @@
         height: 102px;
     }
 
-}
+} */
