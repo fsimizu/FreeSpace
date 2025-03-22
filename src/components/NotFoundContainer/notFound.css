@@ -24,9 +24,10 @@
 
 
 .notFount__button {
-    background-color: var(--main-blue);
-    border: none;
+    background-color: var(--main-blue) !important;
+    border: none !important;
     width: 45%;
+    min-width: 120px
     /* margin-bottom: 0; */
 }
 .notFount__button:hover {

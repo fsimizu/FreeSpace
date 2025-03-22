@@ -94,7 +94,10 @@ export function Navbar() {
 
         {/* Navbar */}
 
-        <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}>
+        <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}
+                style={{
+                  backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+                }}>
 
           {/* Navbar mobile */}
           <div className="container-fluid align-items-end">

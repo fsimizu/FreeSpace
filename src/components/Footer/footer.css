@@ -1,5 +1,5 @@
 .footer__container {
-    background-color: lightgray;
+    background-color: var(--white);
     z-index: 4;
     display: flex;
     flex-direction: column;

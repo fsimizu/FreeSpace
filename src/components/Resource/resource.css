@@ -28,6 +28,10 @@
     /* border: 1px solid red; */
 }
 
+.resource__icon {
+    margin-right: 5px;
+}
+
 .resource__container .card-title{
     margin-bottom: 15px;
 }
