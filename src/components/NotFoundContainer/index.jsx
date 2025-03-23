@@ -4,7 +4,7 @@ import './notFound.css';
 export function NotFoundContainer() {
 
     return (
-        <div className='notFound__container d-flex justify-content-center align-items-end'>
+        <div className='notFound__container d-flex justify-content-center align-items-center'>
             <img src="/images/crashed.svg" alt="not_found" className='notFound__image'/>
             <div className='notFount__content d-flex flex-column justify-content-center align-items-center'>
                 <div className='notFount__404'>

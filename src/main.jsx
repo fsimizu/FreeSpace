@@ -33,6 +33,18 @@ const router = createBrowserRouter([
       element: <Player buttons={buttons.filipino}/>,
     },
     {
+      path: "/resources/french",
+      element: <Player buttons={buttons.french}/>,
+    },
+    {
+      path: "/resources/portuguese",
+      element: <Player buttons={buttons.portuguese}/>,
+    },
+    {
+      path: "/resources/vocabulary",
+      element: <Player buttons={buttons.vocabulary}/>,
+    },
+    {
       path: "*",
       element: <NotFound />
     }

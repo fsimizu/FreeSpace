@@ -18,7 +18,7 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
             >
                 <h6 className="aboutUsCard__title"
                 style={{backgroundColor: `${card.color}`}}
-                >{card.name}</h6>
+                >{card.icon} {card.name}</h6>
                 <div>
                     {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                 </div>
