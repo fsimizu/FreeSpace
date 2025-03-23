@@ -26,6 +26,8 @@
 
 .resource_text {
     /* border: 1px solid red; */
+    /* max-width: 400px; */
+    /* min-height: 80px; */
 }
 
 .resource__icon {
