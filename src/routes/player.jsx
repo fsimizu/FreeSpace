@@ -14,7 +14,7 @@ export function Player({ buttons }) {
     <div>
       <Layout>
         <Breadcrumb items={breadcrumbItems} />
-        <PlayerContainer buttons={buttons} />
+        <PlayerContainer buttons={buttons}/>
         <Instructions />
         {/* <p>link to the script</p> */}
       </Layout>

@@ -18,3 +18,23 @@
     margin-bottom: 20px;
     filter: saturate(0.8)
 }
+
+.aboutUs__content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width: 768px) {
+    .aboutUs__content {
+        flex-direction: row-reverse;
+    }
+    .about__image_container {
+        width: 100%;
+    }
+    .about__cards_container {
+        width: 100%;
+    }
+
+}

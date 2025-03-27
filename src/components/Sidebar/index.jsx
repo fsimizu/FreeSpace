@@ -13,7 +13,8 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setIsCompact(false);
-      }};
+      }
+    };
 
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -41,18 +42,16 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
         ) : (
           <div>
             <ul>
-              <li>
-                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_1} setIsSidebarOverlay={setIsSidebarOverlay} />
-              </li>
-              <li>
-                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_2} setIsSidebarOverlay={setIsSidebarOverlay} />
-              </li>
-              <li>
-                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_3} setIsSidebarOverlay={setIsSidebarOverlay} />
-              </li>
-              <li>
-                <SidebarButton setVideoUrl={setVideoUrl} buttons={buttons.video_4} setIsSidebarOverlay={setIsSidebarOverlay} />
-              </li>
+              {Object.values(buttons.videos).map((video, index) => (
+                <li key={index}>
+                  <SidebarButton
+                    setVideoUrl={setVideoUrl}
+                    buttons={video}
+                    setIsSidebarOverlay={setIsSidebarOverlay}
+                  />
+                </li>
+              ))}
+
             </ul>
           </div>
         )}

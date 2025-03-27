@@ -1,9 +1,34 @@
 .resourcesContainer {
-    padding: var(--padding-sections); 
-    padding-top: 0px; 
+    padding: var(--padding-sections);
+    padding-top: 0px;
     /* padding-bottom: 0px;  */
 }
 
 .resourcesContainer-title {
     margin-bottom: 30px;
+}
+
+.resourcesContainer-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+
+    .resourcesContainer-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .resourcesContainer-cards {
+        grid-template-columns: auto auto auto auto;
+        column-gap: 20px;
+    }
+
 }

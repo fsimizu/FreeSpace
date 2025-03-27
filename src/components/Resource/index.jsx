@@ -11,13 +11,6 @@ export function Resource({ resource }) {
           <h6 className="card-title"><span className='resource__icon'>{resource.icon}</span> {resource.longName}</h6>
           <p className="card-text">{resource.description}</p>
         </div>
-
-
-        {/* <Link to={`/resources/${resource.name}`} className="btn btn-primary resource_button">
-        Go to videos
-      </Link> */}
-
-        {/* </div> */}
       </Link>
     </div>
   )

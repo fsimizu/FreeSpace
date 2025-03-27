@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { scrollTo } from "../../utils/functions";
-import { useState, useEffect, useRef } from "react";
 
 
 import './navbar.css';
@@ -12,7 +11,7 @@ export function Navbar() {
   const handleScroll = (id) => {
     setTimeout(() => { scrollTo(id) }, 200);
     handleCloseClick();
-};
+  };
 
   const handleCloseClick = () => {
     document.getElementById("myNav").style.height = "0%";
@@ -23,7 +22,6 @@ export function Navbar() {
     document.getElementById("myNav").style.height = "100%";
     setIsOverlayActive(true);
   };
-
 
   const [isOverlayActive, setIsOverlayActive] = useState(false);
 
@@ -37,8 +35,6 @@ export function Navbar() {
       document.body.style.overflow = "auto"; // Cleanup when unmounting
     };
   }, [isOverlayActive]);
-
-
 
   const [isSticky, setIsSticky] = useState(false);
   const triggerRef = useRef(null);
@@ -64,7 +60,6 @@ export function Navbar() {
 
   return (
     <>
-
       <div className="navbar__container"
         style={{
           position: location.pathname === '/' ? 'absolute' : 'relative',
@@ -72,7 +67,7 @@ export function Navbar() {
         }}>
         {/* Overlay */}
         <div id="myNav" className="overlay" >
-          <a /*href="javascript:void(0)"*/ className="closebtn" onClick={handleCloseClick}>&times;</a>
+          <a className="closebtn" onClick={handleCloseClick}>&times;</a>
           <div className="overlay-content">
             <Link to="/">
               <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</div>
@@ -93,11 +88,9 @@ export function Navbar() {
 
 
         {/* Navbar */}
-
-        <nav className={`navbar ${isSticky ? "navbar--fixed" : ""}`}
-                style={{
-                  backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
-                }}>
+        <nav className={`navbar-expand-sm navbar ${isSticky ? "navbar--fixed" : ""}`}
+          style={{backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+          }}>
 
           {/* Navbar mobile */}
           <div className="container-fluid align-items-end">
@@ -123,10 +116,16 @@ export function Navbar() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/">
-                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>About us</div>
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About us</div>
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+               {/* <li className="nav-item dropdown" >  */}
+               <li className="nav-item" >
+
+                <Link to="/resources">
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Resources</div>
+                </Link>
+                {/* 
                 <a className="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_about-us">Resources</a>
                 <ul className="dropdown-menu">
                   <li>
@@ -144,14 +143,13 @@ export function Navbar() {
                       <div className="dropdown-item" onClick={() => { handleScroll('ourPurpose') }}><p>Tips & Strategies</p></div>
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </li>
               <li className="nav-item">
                 <Link to="/">
-                  <div className="nav-link text-grey" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
                 </Link>
               </li>
-
 
             </ul>
           </div>
