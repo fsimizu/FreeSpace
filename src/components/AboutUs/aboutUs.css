@@ -1,5 +1,7 @@
 .aboutUs__container {
     padding: var(--padding-sections);
+    padding-left: var(--padding-sides) !important;
+    padding-right: var(--padding-sides) !important;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -13,6 +15,7 @@
 
 .about__image_container img {
     width: 100%;
+    max-width: 600px;
     border-radius: 20px;
     border: 12px solid var(--red);
     margin-bottom: 20px;
@@ -22,6 +25,7 @@
 .aboutUs__content {
     display: flex;
     flex-direction: column;
+    gap: 40px;
 }
 
 
@@ -32,9 +36,11 @@
     }
     .about__image_container {
         width: 100%;
+        margin: auto;
     }
     .about__cards_container {
         width: 100%;
     }
+    
 
 }

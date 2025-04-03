@@ -1,6 +1,6 @@
 .hero__container {
     min-height: 500px;
-    height: 95vh;
+    height: 97vh;
     position: relative;
 
 }
@@ -17,14 +17,13 @@
         url("/images/hero_background_2.jpg");
     background-size: cover;
     background-position: top right;
-    /* border-bottom: 4px solid var(--white); */
-    /* border-bottom: 4px solid red; */
 }
 
 
 .hero__content {
     padding: var(--padding-sections);
-    /* color: var(--black); */
+    padding-left: var(--padding-sides);
+    padding-right: var(--padding-sides);
     position: relative; 
     display: flex;
     flex-direction: column;
@@ -57,7 +56,6 @@
 
 .button_primary button {
     background-color: var(--main-blue);
-    /* margin-bottom: 0; */
 }
 .button_primary button:hover {
     background-color: var(--main-blue);
@@ -66,19 +64,28 @@
     color: var(--black);
 }
 
-/* .button_secondary {
-    margin-top: 1rem;
-}
+@media (min-width: 768px) {
+    .hero__container::before {
+        width: 70vw;
+        right: 0;
+        left: auto;
+        background-image: 
+        linear-gradient(to left, rgba(255, 255, 255, 0) 50%, var(--white) 100%),
+        linear-gradient(to top, rgba(255, 255, 255, 0) 75%, rgba(20, 20, 20, 0.7) 100%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, var(--white) 100%),
+        url("/images/hero_background_2.jpg");
+    }
+    .hero__content {
+        justify-content: center;
+        width: 50vw;
+    }
+    .hero__action_button {
+        justify-content: flex-start;
+    }
 
-.button_secondary button {
-    background-color: transparent;
-    border: 3px solid var(--main-blue);
-    color: var(--white);
-    
 }
-.button_secondary button:hover {
-    background-color: var(--main-blue);
-    transition: background-color 0.3s ease-in-out;
-    border: 3px solid var(--main-blue);
-    color: var(--black);
-} */
+@media (min-width: 1024px) {
+    .hero__container::before {
+        width: 60vw;
+    }
+}

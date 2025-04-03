@@ -20,7 +20,7 @@ export function PlayerContainer({ buttons }) {
 
         {isSidebarOverlay ? (
           <span>
-            <i class="fa-solid fa-x videos__button-more"></i>
+            <i className="fa-solid fa-x videos__button-more"></i>
             Close
           </span>
         ) : (

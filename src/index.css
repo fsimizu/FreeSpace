@@ -32,6 +32,8 @@
   --padding-sections: 3rem 1.3rem;
 }
 
+
+
 body {
   margin: 0px;
   min-width: 320px;
@@ -108,4 +110,16 @@ h2 {
 .action_hover .fa-arrow-right {
   color: var(--main-blue);
   margin-left: 5px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --padding-sides: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --padding-sides: 4rem;
+  }
 }

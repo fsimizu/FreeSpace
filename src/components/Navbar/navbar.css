@@ -2,6 +2,8 @@
     top: 0;
     z-index: 99;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {
@@ -10,7 +12,11 @@
     padding-right: var(--padding-sides) !important;
     padding-top: 4px !important;
     padding-bottom: 4px !important;
-    position: absolute !important;
+    /* position: absolute !important; */
+
+    transition: all 0.7s ease;
+
+    /* max-width: 1400px; */
 }
 
 .navbar--fixed {
@@ -23,6 +29,11 @@
 
 .navbar--fixed .navbar-brand img {
     border: none !important;
+    filter: invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%) !important;
+    
+    height: 4vw;
+    max-height: 61px;
+    min-height: 42px;
 }
 
 .container-fluid {
@@ -45,13 +56,14 @@
 }
 
 .navbar-brand img {
-    height: 4vw;
-    max-height: 61px;
-    min-height: 42px;
-    filter: invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%);
+    height: 5vw;
+    max-height: 90px;
+    min-height: 52px;
     border: 1px solid var(--black);
     border-radius: 10px;
     padding: 2px 6px;
+    margin-left: -11px;
+    transition: all 0.7s ease;
 }
 
 .nav-link {
@@ -142,4 +154,14 @@
     width: 40px;
     margin-right: 15px;
     margin-bottom: 50px;
+}
+
+
+@media (min-width: 768px) {
+    .navbar-brand img {
+        /* filter: invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%); */
+        /* filter: invert(52%) sepia(64%) saturate(320%) hue-rotate(175deg) brightness(92%) contrast(87%); */
+        /* filter: none; */
+        border: none !important;
+    }
 }

@@ -58,14 +58,40 @@ export function Navbar() {
     };
   }, []);
 
+  const [brandFilter, setBrandFilter] = useState('none');
+  useEffect(() => {
+    const updateFilter = () => {
+      if (window.innerWidth < 768) {
+        setBrandFilter('invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%)');
+      } else {
+        if (window.location.pathname === '/') {
+          setBrandFilter('none');
+        } else {
+          setBrandFilter('invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%)');
+        }
+      }
+    }
+
+    updateFilter();
+    window.addEventListener('resize', updateFilter);
+    return () => {
+      window.removeEventListener('resize', updateFilter);
+    };
+  }, []);
+
+
+
   return (
     <>
       <div className="navbar__container"
         style={{
           position: location.pathname === '/' ? 'absolute' : 'relative',
-          backgroundColor: location.pathname === '/' ? 'transparent' : 'var(--main-blue)',
+          // backgroundColor: location.pathname === '/' ? 'transparent' : 'var(--main-blue)',
         }}>
-        {/* Overlay */}
+
+        {/* <div> */}
+
+        {/* Overlay */}        
         <div id="myNav" className="overlay" >
           <a className="closebtn" onClick={handleCloseClick}>&times;</a>
           <div className="overlay-content">
@@ -88,72 +114,58 @@ export function Navbar() {
 
 
         {/* Navbar */}
+        {/* <nav className={`navbar-expand-sm navbar`} */}
         <nav className={`navbar-expand-sm navbar ${isSticky ? "navbar--fixed" : ""}`}
-          style={{backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+          style={{
+            backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
           }}>
 
-          {/* Navbar mobile */}
-          <div className="container-fluid align-items-end">
-            <Link to="/">
-              <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
-                <img src="/images/logo.svg" alt="logo"
-                  style={{
-                    border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
-                  }}
-                />
-              </div>
+            {/* Navbar mobile */}
+            <div className="container-fluid align-items-end">
+              <Link to="/">
+                <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
+                  <img src="/images/logo.svg" alt="logo"
+                    style={{
+                      border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
+                      filter: brandFilter
+                    }}
+                  />
+                </div>
 
-            </Link>
-            <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" ></span>
-            </button>
+              </Link>
+              <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" ></span>
+              </button>
 
-          </div>
+            </div>
 
 
-          {/* Navbar web */}
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About us</div>
-                </Link>
-              </li>
-               {/* <li className="nav-item dropdown" >  */}
-               <li className="nav-item" >
+            {/* Navbar web */}
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
 
-                <Link to="/resources">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Resources</div>
-                </Link>
-                {/* 
-                <a className="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="nav_about-us">Resources</a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/about-us">
-                      <div className="dropdown-item" onClick={() => { handleScroll('heroCommon') }}><p>Mock tests</p></div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about-us">
-                      <div className="dropdown-item" onClick={() => { handleScroll('our-results') }}><p>Vocabulary</p></div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/about-us">
-                      <div className="dropdown-item" onClick={() => { handleScroll('ourPurpose') }}><p>Tips & Strategies</p></div>
-                    </Link>
-                  </li>
-                </ul> */}
-              </li>
-              <li className="nav-item">
-                <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
-                </Link>
-              </li>
+                <li className="nav-item">
+                  <Link to="/">
+                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About us</div>
+                  </Link>
+                </li>
+                <li className="nav-item" >
+                  <Link to="/resources">
+                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Resources</div>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/">
+                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                  </Link>
+                </li>
 
-            </ul>
-          </div>
+              </ul>
+            </div>
         </nav>
+
+        {/* </div> */}
+
         <div ref={triggerRef}></div>
 
       </div>

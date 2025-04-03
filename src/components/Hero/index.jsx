@@ -12,14 +12,10 @@ export function Hero() {
           <h1>Your <strong>NAATI CCL</strong> success starts today!</h1>
           <div>Don't wait. Access our free mock tests and expert strategies to pass your exam with confidence.</div>
         </div>
-
         <Link to={`/resources`} className="hero__action_button button_primary">
           <button className="btn btn-primary"><div>Start Now</div></button>
         </Link>
-
-
       </div>
-
     </div>
   )
 }
