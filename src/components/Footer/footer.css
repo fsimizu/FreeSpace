@@ -1,5 +1,6 @@
 .footer__container {
-    background-color: var(--white);
+    background-color: var(--main-blue);
+    /* border: 1px solid red; */
     z-index: 4;
     display: flex;
     flex-direction: column;
@@ -102,7 +103,9 @@ color: var(--main-blue);
     grid-area: copyright;
 
 }
-
+.footer_edge {
+  grid-area: border;
+}
 
 @media (min-width: 768px) {
    
@@ -112,6 +115,7 @@ color: var(--main-blue);
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
+        "border border border border border border"
           "email email email links links links"
           "logo logo logo logo social social"
           "copyright copyright copyright copyright copyright copyright";
@@ -174,5 +178,7 @@ color: var(--main-blue);
     .footer__social{
         margin: 0;  
         }
+
+    
 }
 

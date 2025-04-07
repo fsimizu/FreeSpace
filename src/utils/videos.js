@@ -131,7 +131,7 @@ export const buttons = {
     }
   },
   french: {
-    title: 'French',
+    title: 'French Mock Tests',
     videos: {
       video_1: {
         type: 'Mock test',
@@ -168,7 +168,7 @@ export const buttons = {
     }
   },
   portuguese: {
-    title: 'Portuguese',
+    title: 'Portuguese Mock Tests',
     videos: {
       video_1: {
         type: 'Mock test',

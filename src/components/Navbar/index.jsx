@@ -82,16 +82,17 @@ export function Navbar() {
 
 
   return (
-    <>
+    // <div>
       <div className="navbar__container"
         style={{
-          position: location.pathname === '/' ? 'absolute' : 'relative',
-          // backgroundColor: location.pathname === '/' ? 'transparent' : 'var(--main-blue)',
-        }}>
+          position: location.pathname === '/' ? 'absolute' : 'absolute',
+        }}
+      >
+
 
         {/* <div> */}
 
-        {/* Overlay */}        
+        {/* Overlay */}
         <div id="myNav" className="overlay" >
           <a className="closebtn" onClick={handleCloseClick}>&times;</a>
           <div className="overlay-content">
@@ -105,7 +106,7 @@ export function Navbar() {
               <div onClick={() => { handleCloseClick; handleScroll('root') }}>Resources</div>
             </Link>
             <div className="overlay__social-media">
-              <div className="icon__social-media"><a href="https://www.facebook.com/HOOPPeru/" role="button"><i className="fab fa-facebook-f fa-md text-blue"></i></a></div>
+              <div className="icon__social-media"><a href="https://www.facebook.com/profile.php?id=61569138959083" role="button"><i className="fab fa-facebook-f fa-md text-blue"></i></a></div>
               <div className="icon__social-media"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-md"></i></a></div>
               <div className="icon__social-media"><a href="https://ko-fi.com/fs_learn" role="button"><i className="fab fas fa-ko-fi fa-md"></i></a></div>
             </div>
@@ -115,53 +116,66 @@ export function Navbar() {
 
         {/* Navbar */}
         {/* <nav className={`navbar-expand-sm navbar`} */}
+        <div
+                  style={{
+                    backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+                    position: 'absolute',
+                    width: '100%',
+                    height: '6vw',
+                    maxHeight: '140px',
+                    minHeight: '68px',
+                  }}
+        >
+          </div>
+
         <nav className={`navbar-expand-sm navbar ${isSticky ? "navbar--fixed" : ""}`}
           style={{
-            backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+            // backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
+            backgroundColor: location.pathname === '/' ? '' : '',
           }}>
 
-            {/* Navbar mobile */}
-            <div className="container-fluid align-items-end">
-              <Link to="/">
-                <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
-                  <img src="/images/logo.svg" alt="logo"
-                    style={{
-                      border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
-                      filter: brandFilter
-                    }}
-                  />
-                </div>
+          {/* Navbar mobile */}
+          <div className="container-fluid align-items-end">
+            <Link to="/">
+              <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
+                <img src="/images/logo.svg" alt="logo"
+                  style={{
+                    border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
+                    filter: brandFilter
+                  }}
+                />
+              </div>
 
-              </Link>
-              <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" ></span>
-              </button>
+            </Link>
+            <button onClick={handleOpenClick} className="navbar-toggler" type="button" data-bs-toggle="collapse" /*data-bs-target="#navbarNavDropdown"*/ aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon" ></span>
+            </button>
 
-            </div>
+          </div>
 
 
-            {/* Navbar web */}
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav">
+          {/* Navbar web */}
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
 
-                <li className="nav-item">
-                  <Link to="/">
-                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About us</div>
-                  </Link>
-                </li>
-                <li className="nav-item" >
-                  <Link to="/resources">
-                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Resources</div>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/">
-                    <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
-                  </Link>
-                </li>
+              <li className="nav-item">
+                <Link to="/">
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('aboutUs') }}>About us</div>
+                </Link>
+              </li>
+              <li className="nav-item" >
+                <Link to="/resources">
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('root') }}>Resources</div>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/">
+                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                </Link>
+              </li>
 
-              </ul>
-            </div>
+            </ul>
+          </div>
         </nav>
 
         {/* </div> */}
@@ -170,6 +184,6 @@ export function Navbar() {
 
       </div>
 
-    </>
+    // </div>
   )
 }

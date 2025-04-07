@@ -17,7 +17,9 @@ export function Breadcrumb({ items }) {
             {index === items.length - 1 ? (
               <span>{item.name}</span>
             ) : (
-              <a href={item.link}>{item.name}</a>
+              <Link to={`/${item.name}`}>
+                {item.name}
+              </Link>
             )}
             {index < items.length - 1 && <span className='greater'> &gt; </span>}
 
