@@ -5,7 +5,7 @@ export const languages = {
         imgUrl: '/images/lang-spanish.png',
         color: 'var(--red)',
         colorFrom: 'var(--red)',
-        colorTo: 'var(--white)',
+        colorTo: 'var(--yellow)',
         go: 'Vamos',
         goText: 'Estás listo?'
     },
@@ -14,8 +14,8 @@ export const languages = {
         shortName: 'pt',
         imgUrl: '/images/lang-portuguese.png',
         color: 'var(--yellow)',
-        colorFrom: 'var(--white)',
-        colorTo: 'var(--yellow)',
+        colorFrom: 'var(--yellow)',
+        colorTo: 'var(--purple)',
         go: 'Bora lá',
         goText: 'Ta pronto?'
     },
@@ -24,7 +24,7 @@ export const languages = {
         shortName: 'fr',
         imgUrl: '/images/lang-french.png',
         color: 'var(--main-blue)',
-        colorFrom: 'var(--white)',
+        colorFrom: 'var(--yellow)',
         colorTo: 'var(--main-blue)',
         go: 'On y va',
         goText: "T'es pret?"
@@ -35,7 +35,7 @@ export const languages = {
         imgUrl: '/images/lang-filipino.png',
         color: 'var(--green)',
         colorFrom: 'var(--green)',
-        colorTo: 'var(--white)',
+        colorTo: 'var(--yellow)',
         go: 'Tara na',
         goText: 'Handa ka na ba?'
     }

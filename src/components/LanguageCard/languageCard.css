@@ -48,6 +48,21 @@
    transform: rotateY(180deg);
 }
 
+.card-body .btn-primary {
+      /* border: 1px solid var(--main-blue); */
+      color: var(--black);
+      padding: 10px;
+      border-radius: 10px;
+      background-color: var(--main-blue);
+      border: none
+}
+
+.card-body .btn-primary:hover {
+   background-color: var(--main-blue);
+   filter: brightness(120%);
+   transition: filter 0.3s ease-in-out;
+   color: var(--black);
+}
 
 
 @media only screen and (min-width: 768px) {

@@ -12,16 +12,14 @@
     padding-right: var(--padding-sides) !important;
     padding-top: 4px !important;
     padding-bottom: 4px !important;
-    /* position: absolute !important; */
-
     transition: all 0.7s ease;
+    background-color: none;
 
     /* max-width: 1400px; */
 }
 
 .navbar--fixed {
     background-color: var(--main-blue);
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: fixed !important;
     top: 0;
@@ -56,6 +54,9 @@
     
 }
 
+.navbar-brand {
+flex-grow: 3;
+}
 .navbar-brand img {
     height: 5vw;
     max-height: 90px;
@@ -82,6 +83,10 @@
 
 .navbar .container-fluid {
     align-items: center !important;
+}
+
+.navbar_body {
+    max-width: var(--max-width);
 }
 
 /* The Overlay (background) */

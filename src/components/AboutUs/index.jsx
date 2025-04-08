@@ -37,28 +37,32 @@ export function AboutUs() {
   return (
     <div id="aboutUs" className="aboutUs__container">
 
-      <div className="about__text_container">
-        <h2>The <strong>Tools</strong> You Need. The <strong>Support</strong> You Deserve</h2>
-        <div>Free and ready for you</div>
-      </div>
-
-      <div className="aboutUs__content">
-        <div className="about__image_container">
-          <img src="/images/about.jpg" alt="about_us" />
+      <div className="aboutUs__body">
+        <div className="about__text_container">
+          <h2>The <strong>Tools</strong> You Need. The <strong>Support</strong> You Deserve</h2>
+          <div>Free and ready for you</div>
         </div>
 
-        <div className="about__cards_container">
-          {Object.entries(cards).map(([key, card]) => (
-            <AboutUsCard
-              key={key}
-              card={card}
-              isExpanded={expandedCard === key}
-              onToggle={() => handleCardClick(key)}
-            />
-          ))}
+        <div className="aboutUs__content">
+          <div className="about__image_container">
+            <img src="/images/about.jpg" alt="about_us" />
+          </div>
+
+          <div className="about__cards_container">
+            {Object.entries(cards).map(([key, card]) => (
+              <AboutUsCard
+                key={key}
+                card={card}
+                isExpanded={expandedCard === key}
+                onToggle={() => handleCardClick(key)}
+              />
+            ))}
+          </div>
+
         </div>
 
       </div>
+
 
     </div>
   )

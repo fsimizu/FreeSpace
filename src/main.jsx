@@ -13,7 +13,7 @@ import { buttons } from './utils/videos.js';
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
       path: "/",
       element: <Root />

@@ -13,34 +13,6 @@ export function Footer() {
     return (
         <div className="footer__container-global">
 
-            {/* <div className="absolute top-0 left-0 w-full overflow-hidden leading-none footer_edge">
-                <svg viewBox="0 0 1440 250" className="w-full h-20">
-                    <path
-                        style={{
-                            fill: "var(--main-blue)",
-                            stroke: "var(--main-blue)"
-                        }}
-                        fillOpacity="1"
-                        d="M0,224L48,218.7C96,213,192,203,288,192C384,181,480,171,576,181.3C672,192,768,224,864,229.3C960,235,1056,213,1152,192C1248,171,1344,149,1392,138.7L1440,128V320H0Z"
-                    ></path>
-                </svg>
-            </div> */}
-
-            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none footer_edge">
-                <svg viewBox="0 0 1440 200" className="w-full h-12" preserveAspectRatio="none">
-                    <path
-                        style={{
-                            fill: "var(--main-blue)",
-                            stroke: "var(--main-blue)"
-                        }}
-                        fillOpacity="1"
-                        d="M0,80 C60,120 120,60 200,100 C280,140 360,60 440,100 C520,140 600,60 680,100 C760,140 840,60 920,100 C1000,140 1080,60 1160,100 C1240,140 1320,60 1440,80 L1440,200 L0,200Z"
-                    />
-                </svg>
-            </div>
-
-
-
             <div className="footer__container relative">
 
                 <div className="footer__logo" onClick={() => { handleScroll('heroHome') }}>
