@@ -29,18 +29,12 @@
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
-/* 
-    padding: var(--padding-sections);
-    padding-left: var(--padding-sides);
-    padding-right: var(--padding-sides); */
 
 }
 
 .hero__body {
     width: 100%;
     height: 100%;
-    max-width: var(--max-width);
-    margin: auto;
 }
 
 .hero__text_container h1{

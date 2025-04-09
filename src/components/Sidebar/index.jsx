@@ -4,6 +4,7 @@ import './sidebar.css';
 
 export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }) {
   const [isCompact, setIsCompact] = useState(false);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0)
 
   const toggleCompact = () => {
     setIsCompact(!isCompact);
@@ -22,6 +23,24 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
+  // Set the initial video URL and active button on mount
+  useEffect(() => {
+    if (buttons.videos && Object.values(buttons.videos).length > 0) {
+      const firstVideo = Object.values(buttons.videos)[0];
+      if (firstVideo.enabled) {
+        setVideoUrl(`${firstVideo.url}`);
+      }
+    }
+  }, [buttons.videos, setVideoUrl]);
+
+  const handleButtonClick = (url, index) => {
+    setVideoUrl(url);
+    setActiveButtonIndex(index);
+    setIsSidebarOverlay(false);
+  };
+
 
   return (
     <div className={`sidebar ${isCompact ? 'compact' : ''} ${isOverlay ? 'sideOverlay' : ''}`}>
@@ -45,20 +64,19 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
               {Object.values(buttons.videos).map((video, index) => (
                 <li key={index}>
                   <SidebarButton
-                    setVideoUrl={setVideoUrl}
+                    // setVideoUrl={setVideoUrl}
+                    setVideoUrl={handleButtonClick}
                     buttons={video}
                     setIsSidebarOverlay={setIsSidebarOverlay}
+                    isActive={index === activeButtonIndex} // Check if this button is active
+                    index={index} // Pass the index to identify the button
                   />
                 </li>
               ))}
-
             </ul>
           </div>
         )}
       </div>
-
-
-
     </div>
   );
 }

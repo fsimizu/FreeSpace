@@ -17,7 +17,8 @@
 
 }
 
-.sidebar__button:not(.disabled):hover {
+.sidebar__button:not(.disabled):hover,
+.sidebar__button.active {
     background-color: var(--light-blue);
     border-left: 4px solid var(--main-blue);
     padding-left: 17px;

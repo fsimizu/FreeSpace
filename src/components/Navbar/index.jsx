@@ -79,18 +79,12 @@ export function Navbar() {
     };
   }, []);
 
-
-
   return (
-    // <div>
     <div className="navbar__container"
       style={{
         position: location.pathname === '/' ? 'absolute' : 'absolute',
       }}
     >
-
-
-      {/* <div> */}
 
       {/* Overlay */}
       <div id="myNav" className="overlay" >
@@ -115,21 +109,20 @@ export function Navbar() {
 
 
       {/* Navbar */}
-      <div
+      <div className="navbar-background"
         style={{
           backgroundColor: location.pathname === '/' ? '' : 'var(--main-blue)',
-          // backgroundColor: location.pathname === '/' ? '' : 'var(--orange)',
           position: 'absolute',
           width: '100%',
           height: '6vw',
-          maxHeight: '140px',
+          maxHeight: '90px',
           minHeight: '68px',
         }}
       ></div>
 
       <nav className={`navbar-expand-sm navbar ${isSticky ? "navbar--fixed" : ""}`}>
 
-        <div className="container-fluid align-items-end navbar_body">
+        <div className="container-fluid align-items-end max-width">
 
           {/* Navbar Logo */}
           <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
@@ -168,17 +161,10 @@ export function Navbar() {
               </li>
             </ul>
           </div>
-
         </div>
-
       </nav>
 
-      {/* </div> */}
-
       <div ref={triggerRef}></div>
-
     </div>
-
-    // </div>
   )
 }

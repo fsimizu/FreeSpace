@@ -5,27 +5,30 @@ import './breadcrumb.css';
 export function Breadcrumb({ items }) {
   return (
     <nav className="breadcrumb">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-          <span className='greater'> &gt; </span>
-        </li>
-
-        {items.map((item, index) => (
-
-          <li key={index}>
-            {index === items.length - 1 ? (
-              <span>{item.name}</span>
-            ) : (
-              <Link to={`/${item.name}`}>
-                {item.name}
-              </Link>
-            )}
-            {index < items.length - 1 && <span className='greater'> &gt; </span>}
-
+      <div className="max-width breadcrumb-body">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+            <span className='greater'> &gt; </span>
           </li>
-        ))}
-      </ul>
+
+          {items.map((item, index) => (
+
+            <li key={index}>
+              {index === items.length - 1 ? (
+                <span>{item.name}</span>
+              ) : (
+                <Link to={`/${item.name}`}>
+                  {item.name}
+                </Link>
+              )}
+              {index < items.length - 1 && <span className='greater'> &gt; </span>}
+
+            </li>
+          ))}
+        </ul>
+
+      </div>
     </nav>
   );
 }

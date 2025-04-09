@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <div id="heroHome" className="hero__container">
       
-      <div className="hero__body">
+      <div className="hero__body max-width">
 
         <div className="hero__content">
           <div className="hero__text_container">

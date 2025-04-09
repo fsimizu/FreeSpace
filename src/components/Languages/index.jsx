@@ -10,13 +10,13 @@ import { languages } from "../../utils/languages.js"
 export function Languages() {
 
   return (
-    <div>
+    <>
 
-        <div className="languages__border">
+        {/* <div className="languages__border">
           <svg width="100%" height="100px" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,50 C300,0 900,100 1200,50 L1200,100 L0,100 Z" fill="#F2D388"></path>
           </svg>
-        </div>
+        </div> */}
 
 
 
@@ -44,13 +44,13 @@ export function Languages() {
 
       </div>
 
-      <div className="languages__border">
+      {/* <div className="languages__border">
         <svg width="100%" height="100px" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,50 C300,0 900,100 1200,50 L1200,100 L0,100 Z" fill="#F2D388" transform="rotate(180, 600, 50)"></path>
       </svg>
-        </div>
+        </div> */}
 
-    </div>
+    </>
 
   )
 }

@@ -31,11 +31,11 @@
   text-align: center;
 }
 
-.sidebar .toggle-button:hover {
+.sidebar .toggle-button:hover
+{
   background-color: var(--light-blue);
   text-decoration: underline;
 }
-
 
 
 @media (max-width: 768px) {

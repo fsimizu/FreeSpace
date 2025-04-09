@@ -10,37 +10,34 @@ export function PlayerContainer({ buttons }) {
   return (
 
     <div className="player__container">
-      <h2>{buttons.title}</h2>
+      <div className="max-width">
+        <h2>{buttons.title}</h2>
 
-      <button className="videos__button"
-        onClick={() => setIsSidebarOverlay(!isSidebarOverlay)}
-      >
+        <button className="videos__button"
+          onClick={() => setIsSidebarOverlay(!isSidebarOverlay)}
+        >
+          {isSidebarOverlay ? (
+            <span>
+              <i className="fa-solid fa-x videos__button-more"></i>
+              Close
+            </span>
+          ) : (
+            <span>
+              <i className="fa-solid fa-bars videos__button-more"></i> Videos
+            </span>
+          )}
 
+        </button>
 
+        <div className="player__content">
+          <Sidebar
+            setVideoUrl={setVideoUrl}
+            buttons={buttons}
+            isOverlay={isSidebarOverlay}
+            setIsSidebarOverlay={setIsSidebarOverlay} />
 
-        {isSidebarOverlay ? (
-          <span>
-            <i className="fa-solid fa-x videos__button-more"></i>
-            Close
-          </span>
-        ) : (
-          <span>
-            <i className="fa-solid fa-bars videos__button-more"></i> Videos
-          </span>
-        )}
-
-      </button>
-
-      <div className="player__content">
-        <Sidebar
-          setVideoUrl={setVideoUrl}
-          buttons={buttons}
-          isOverlay={isSidebarOverlay}
-          setIsSidebarOverlay={setIsSidebarOverlay} />
-
-        <Video videoUrl={videoUrl} onLoad={() => setLoading(false)} />
-
-
+          <Video videoUrl={videoUrl} onLoad={() => setLoading(false)} />
+        </div>
       </div>
     </div>
   );

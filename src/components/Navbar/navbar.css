@@ -15,7 +15,6 @@
     transition: all 0.7s ease;
     background-color: none;
 
-    /* max-width: 1400px; */
 }
 
 .navbar--fixed {
@@ -49,7 +48,6 @@
 }
 
 .navbar-nav .nav-item{
-    /* border: 1px solid red; */
     width: 120px;
     
 }
@@ -59,7 +57,7 @@ flex-grow: 3;
 }
 .navbar-brand img {
     height: 5vw;
-    max-height: 90px;
+    max-height: 70px;
     min-height: 52px;
     border: 1px solid var(--black);
     border-radius: 10px;
@@ -85,9 +83,6 @@ flex-grow: 3;
     align-items: center !important;
 }
 
-.navbar_body {
-    max-width: var(--max-width);
-}
 
 /* The Overlay (background) */
 .overlay {
@@ -165,9 +160,6 @@ flex-grow: 3;
 
 @media (min-width: 768px) {
     .navbar-brand img {
-        /* filter: invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%); */
-        /* filter: invert(52%) sepia(64%) saturate(320%) hue-rotate(175deg) brightness(92%) contrast(87%); */
-        /* filter: none; */
         border: none !important;
     }
 }

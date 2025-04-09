@@ -6,6 +6,9 @@
   padding-right: var(--padding-sides) !important;
 }
 
+.breadcrumb-body {
+  width: 100%;
+}
 
 .breadcrumb ul {
   list-style: none;
@@ -13,6 +16,7 @@
   margin: 0;
   display: flex;
   align-items: center;
+
 }
 
 .breadcrumb li {
@@ -36,5 +40,12 @@
   font-weight: bold;
   margin-left: 5px;
   font-size: 1.1rem;
-  /* color: red; */
+
+}
+
+
+@media (min-width: 1240px) {
+  .breadcrumb {
+    padding-top: 120px !important;
+  }
 }

@@ -1,8 +1,9 @@
 .footer__container-global {
   padding: var(--padding-sections);
+  padding-top: 0;
   padding-left: var(--padding-sides) !important;
   padding-right: var(--padding-sides) !important;
-
+  background-color: var(--light-grey);
 }
 
 .footer__container {
@@ -11,9 +12,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: var(--max-width);
-  margin: auto;
-
 }
 
 .footer__links h5,

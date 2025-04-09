@@ -8,11 +8,6 @@
 
 }
 
-.aboutUs__body {
-    max-width: var(--max-width);
-    margin: auto;
-}
-
 .about__text_container {
     margin-bottom: 40px;
 }
