@@ -155,8 +155,8 @@ export function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/">
-                  <div className="nav-link" id="nav_about" onClick={() => { handleScroll('heroCommon') }}>Support us</div>
+                <Link to="https://ko-fi.com/fs_learn">
+                  <div className="nav-link">Support us</div>
                 </Link>
               </li>
             </ul>

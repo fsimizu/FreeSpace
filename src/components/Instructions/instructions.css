@@ -9,3 +9,23 @@
     justify-content: space-between;
     align-items: flex-end;
 }
+
+.instructions__title svg { /* Target the SVG icons */
+    transition: transform 0.3s ease-in-out; /* Add transition for rotation */
+  }
+.instructions__title svg.rotated { /* Class to apply rotation */
+    transform: rotate(180deg);
+  }
+
+.instructions__content {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .instructions__content--collapsed {
+    max-height: 0;
+  }
+  
+  .instructions__content--expanded {
+    max-height: 500px;
+  }

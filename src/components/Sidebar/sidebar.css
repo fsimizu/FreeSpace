@@ -1,12 +1,13 @@
 .sidebar {
-  width: 250px;
+  width: 26vw;
+  max-width: 250px;
   background-color: var(--white);
   transition: width 0.3s ease;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  max-height: 100%;
-  /* border: 1px solid red; */
+  scrollbar-width: thin;
+
 }
 
 .sidebar.compact {
@@ -37,6 +38,13 @@
   text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+  .sidebar {
+height: calc(53vw - 136px);
+min-height: 292px;
+max-height: 534px;
+}
+}
 
 @media (max-width: 768px) {
   .sidebar {

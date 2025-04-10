@@ -19,12 +19,13 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
                 <h6 className="aboutUsCard__title"
                 style={{backgroundColor: `${card.color}`}}
                 >{card.icon} {card.name}</h6>
-                <div>
-                    {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                <div className="aboutUsCard__arrow">
+                    {isExpanded ? <ChevronDown size={16} className="rotated"/> : <ChevronDown size={16} />}
                 </div>
             </div>
-            <div className={`aboutUsCard__content ${isExpanded ? 'expanded' : ''}`}>
-                {isExpanded &&
+            
+            <div className={`aboutUsCard__content ${isExpanded ? 'aboutUsCard__content-expanded' : 'aboutUsCard__content-collapsed'}`}>
+                {/* {isExpanded && */}
                     <div>
                         {card.description}
 
@@ -34,8 +35,7 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
                             </Link>
                         </div>
 
-                    </div>
-                }
+                    </div>                {/* } */}
             </div>
         </div>
     )

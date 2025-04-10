@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Sidebar } from "../Sidebar";
 import { Video } from "../Video";
+import { Loading } from "../Loading";
 import './playerContainer.css';
 
 export function PlayerContainer({ buttons }) {
   const [videoUrl, setVideoUrl] = useState(`${buttons.videos.video_1.url}`);
   const [isSidebarOverlay, setIsSidebarOverlay] = useState(false);
+
+  // const [loading, setLoading] = useState(true);
 
   return (
 
@@ -36,8 +39,10 @@ export function PlayerContainer({ buttons }) {
             isOverlay={isSidebarOverlay}
             setIsSidebarOverlay={setIsSidebarOverlay} />
 
-          <Video videoUrl={videoUrl} onLoad={() => setLoading(false)} />
+          <Video videoUrl={videoUrl} />
+
         </div>
+
       </div>
     </div>
   );
