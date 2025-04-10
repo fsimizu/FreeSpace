@@ -2,8 +2,6 @@ import { scroller } from "react-scroll";
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-
-
 export const scrollTo = (id) => {
     scroller.scrollTo(id, {
         duration: 400,

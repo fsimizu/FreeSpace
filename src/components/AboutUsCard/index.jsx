@@ -1,11 +1,8 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Link } from 'react-router-dom';
 import './aboutUsCard.css';
 
 export function AboutUsCard({ card, isExpanded, onToggle }) {
-
-    // const [aboutIsExpanded, setAboutIsExpanded] = useState(card.initial);
 
     return (
         <div className="aboutUsCard__container">
@@ -25,7 +22,7 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
             </div>
             
             <div className={`aboutUsCard__content ${isExpanded ? 'aboutUsCard__content-expanded' : 'aboutUsCard__content-collapsed'}`}>
-                {/* {isExpanded && */}
+                
                     <div>
                         {card.description}
 
@@ -35,7 +32,7 @@ export function AboutUsCard({ card, isExpanded, onToggle }) {
                             </Link>
                         </div>
 
-                    </div>                {/* } */}
+                    </div>         
             </div>
         </div>
     )

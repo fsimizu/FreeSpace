@@ -41,5 +41,9 @@
   
   .aboutUsCard__content-expanded {
     max-height: 500px;
-    transition-delay: 0.4s; /* Default: no delay */
+    transition-delay: 0.4s;
+  }
+
+  .aboutUsCard__content h6 {
+    margin-right: 8px;
   }

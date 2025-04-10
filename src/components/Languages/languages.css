@@ -1,7 +1,4 @@
 .languages__container {
-    /* border: 1px solid red; */
-    /* background-color: #F2D388; */
-
     padding: var(--padding-sections);
     padding-top: 20px;
     text-align: center;
@@ -20,5 +17,4 @@
 
 .languages__border {
     width: 100%;
-    /* border: 1px solid red; */
 }

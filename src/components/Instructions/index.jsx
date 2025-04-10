@@ -1,11 +1,9 @@
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import './instructions.css';
 
 export function Instructions() {
-
     const [isExpanded, setIsExpanded] = useState(true);
-
 
     return (
         <div className="instructions__container">

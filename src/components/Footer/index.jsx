@@ -1,8 +1,7 @@
 import React from "react";
-import './footer.css';
 import { Link } from 'react-router-dom';
 import { scrollTo } from "../../utils/functions";
-
+import './footer.css';
 
 export function Footer() {
 
@@ -11,7 +10,6 @@ export function Footer() {
     };
 
     return (
-
         <>
             <div>
                 <svg width="100%" height="100px" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +21,7 @@ export function Footer() {
                 <div className="footer__container max-width relative">
                     <div className="footer__logo" onClick={() => { handleScroll('heroHome') }}>
                         <Link to="/">
-                            <img src="/images/logo.svg" alt="logo" />
+                            <img src="/images/logo.svg" alt="freeSpace_logo" />
                         </Link>
                     </div>
 
@@ -63,9 +61,8 @@ export function Footer() {
                             <i className="fa-regular fa-envelope"></i>
                             <h6>Email</h6>
                         </div>
-                        <a href="mailto:freespace@vizarsolutions.com?subject=Hello"><p>freespace@vizarsolutions.com</p></a>
+                        <a href="mailto:hello@freespacelearn.com?subject=Hello"><p>hello@freespacelearn.com</p></a>
                     </div>
-
 
                     <div className="footer__social">
                         <div className="footer__icon"><a href="https://www.youtube.com/@FS_Learn" role="button"><i className="fab fa-youtube fa-lg"></i></a></div>

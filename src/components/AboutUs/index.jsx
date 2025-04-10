@@ -1,7 +1,7 @@
-import './aboutUs.css';
-import { AboutUsCard } from '../AboutUsCard';
+import { BookOpenText, Headset, Search } from "lucide-react";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, BookOpenText, Search, Headset } from "lucide-react";
+import { AboutUsCard } from '../AboutUsCard';
+import './aboutUs.css';
 
 export function AboutUs() {
   const cards = {
@@ -9,21 +9,21 @@ export function AboutUs() {
       name: 'Tips & Strategies',
       shortName: 'tips',
       description: "Master the art of interpreting with expert tips and proven strategies! From note-taking techniques to memory tricks, we’ve got everything you need to boost your confidence and accuracy.",
-      color: 'var(--orange)',
+      color: 'var(--mint)',
       icon: <Search size={18} />
     },
     vocab: {
       name: 'Vocabulary',
       shortName: 'vocabulary',
       description: "Expand your language skills with essential vocabulary lists and exercises! Whether you’re tackling medical, legal, or everyday conversations, these words and phrases will help you interpret like a pro.",
-      color: 'var(--green)',
+      color: 'var(--yellow)',
       icon: <BookOpenText size={18} />
     },
     mock: {
       name: 'Mock Tests',
       shortName: '',
       description: "Put your skills to the test with realistic mock exams! Practice under real conditions, track your progress, and get ready to ace your next interpreting challenge.",
-      color: 'var(--purple)',
+      color: 'var(--lilac)',
       icon: <Headset size={18} />
     },
   };
@@ -58,11 +58,8 @@ export function AboutUs() {
               />
             ))}
           </div>
-
         </div>
-
       </div>
-
 
     </div>
   )

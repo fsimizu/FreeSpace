@@ -7,12 +7,10 @@
   flex-direction: column;
   overflow-y: auto;
   scrollbar-width: thin;
-
 }
 
 .sidebar.compact {
   width: 60px;
-  /* padding: 10px; */
 }
 
 .sidebar ul {
@@ -26,7 +24,6 @@
   padding: 10px;
   margin-bottom: 20px;
   border: none;
-  /* background-color: #007bff; */
   color: var(--black);
   cursor: pointer;
   text-align: center;
@@ -65,13 +62,9 @@ max-height: 534px;
     width: 100%;
     z-index: 80;
     height: 100%
-      /* transition: width 0s ease-in; */
   }
 
   .sidebar:not(.sideOverlay) {
     transition: none;
   }
-
-
-
 }

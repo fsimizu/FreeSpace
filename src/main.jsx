@@ -1,17 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { createHashRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Root } from './routes/root.jsx';
-import { Resources } from './routes/resources.jsx';
-import { Video } from './components/Video/index.jsx';
-import { Player } from './routes/player.jsx';
-import { NotFound } from './routes/notFound.jsx';
-import { PlayerContainer } from './components/PlayerContainer/index.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './index.css';
+import { NotFound } from './routes/notFound.jsx';
+import { Player } from './routes/player.jsx';
+import { Resources } from './routes/resources.jsx';
+import { Root } from './routes/root.jsx';
 import { buttons } from './utils/videos.js';
-
-
 
 const router = createBrowserRouter([
     {
@@ -43,6 +39,10 @@ const router = createBrowserRouter([
     {
       path: "/resources/vocabulary",
       element: <Player buttons={buttons.vocabulary}/>,
+    },
+    {
+      path: "/resources/tips",
+      element: <Player buttons={buttons.tips}/>,
     },
     {
       path: "*",

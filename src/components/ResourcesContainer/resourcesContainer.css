@@ -16,13 +16,11 @@
 
 
 @media (min-width: 768px) {
-
     .resourcesContainer-cards {
         display: grid;
         grid-template-columns: auto auto;
         column-gap: 20px;
     }
-
 }
 
 @media (min-width: 1024px) {

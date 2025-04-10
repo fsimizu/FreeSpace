@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { scrollTo } from "../../utils/functions";
 
-
 import './navbar.css';
 
 export function Navbar() {
@@ -65,7 +64,7 @@ export function Navbar() {
         setBrandFilter('invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%)');
       } else {
         if (window.location.pathname === '/') {
-          setBrandFilter('none'); // OJO aca, el hashRouter afecta este filtro!!
+          setBrandFilter('none');
         } else {
           setBrandFilter('invert(96%) sepia(18%) saturate(372%) hue-rotate(355deg) brightness(118%) contrast(99%)');
         }
@@ -127,7 +126,7 @@ export function Navbar() {
           {/* Navbar Logo */}
           <div className="navbar-brand" onClick={() => { handleScroll('heroHome') }}>
             <Link to="/">
-              <img src="/images/logo.svg" alt="logo"
+              <img src="/images/logo.svg" alt="freeSpace_logo"
                 style={{
                   border: location.pathname === '/' ? '1px solid var(--black)' : 'none',
                   filter: brandFilter

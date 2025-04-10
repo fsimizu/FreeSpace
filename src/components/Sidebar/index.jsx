@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SidebarButton } from '../SidebarButton/sidebarButton';
 import './sidebar.css';
 
@@ -24,8 +24,6 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
     };
   }, []);
 
-
-  // Set the initial video URL and active button on mount
   useEffect(() => {
     if (buttons.videos && Object.values(buttons.videos).length > 0) {
       const firstVideo = Object.values(buttons.videos)[0];
@@ -64,12 +62,11 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
               {Object.values(buttons.videos).map((video, index) => (
                 <li key={index}>
                   <SidebarButton
-                    // setVideoUrl={setVideoUrl}
                     setVideoUrl={handleButtonClick}
                     buttons={video}
                     setIsSidebarOverlay={setIsSidebarOverlay}
-                    isActive={index === activeButtonIndex} // Check if this button is active
-                    index={index} // Pass the index to identify the button
+                    isActive={index === activeButtonIndex}
+                    index={index}
                   />
                 </li>
               ))}

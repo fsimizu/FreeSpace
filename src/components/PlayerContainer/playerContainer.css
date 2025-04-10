@@ -29,7 +29,6 @@ color: var(--black) !important ;
 
 }
 
-
 @media (min-width: 768px) {
     .videos__button {
         display: none;

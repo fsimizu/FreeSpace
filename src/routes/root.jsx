@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
-import { Layout } from "../layout/Layout.jsx";
 import { useInView } from 'react-intersection-observer';
 import { Loading } from "../components/Loading";
+import { Layout } from "../layout/Layout.jsx";
 
 const Hero = lazy(() => import('../components/Hero').then((module) => ({ default: module.Hero })));
 const AboutUs = lazy(() => import('../components/AboutUs').then((module) => ({ default: module.AboutUs })));

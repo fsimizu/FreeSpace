@@ -21,13 +21,15 @@
   --light-grey: #F2F2F2;
   --white: #FEFDF9;
   --green: #A3C9A8;
-  --yellow: #F2D388;
+  --yellow: #ffe9b1;
   --purple: #8C6A9F;
   --red: #E07A5F;
   --orange:#F4A261;
   --black: #121212;
-
-
+  --lilac: #e3c6f1; 
+  --beige: #fce5cd;
+  --mint: #bfe1d2;
+  --pink: #f7d9e3;
 
   --padding-sides: 1rem;
   --padding-sections: 3rem 1.3rem;
@@ -42,13 +44,6 @@ body {
   min-height: 100vh;
   background-color: var(--white);
   color: var(--black);
-/* 
-  display: flex;
-  justify-content: center; */
-}
-
-#root {
-  /* max-width: 1000px; */
 }
 
 h1 {
@@ -67,7 +62,6 @@ h2 {
   max-width: var(--max-width);
   margin: auto
 }
-
 
 /* ko-fi icon */
 .fa-ko-fi::before {
@@ -108,7 +102,7 @@ h2 {
 }
 
 .action_hover a:hover i {
-  transform: translateX(5px); /* Moves arrow 5px to the right */
+  transform: translateX(5px);
   color: var(--orange)
 }
 

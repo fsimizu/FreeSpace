@@ -1,6 +1,5 @@
+import { BookOpenText, Headset, Search } from "lucide-react";
 import { Resource } from '../Resource';
-import { useState } from "react";
-import { ChevronDown, ChevronUp, BookOpenText, Search, Headset } from "lucide-react";
 
 import './resourcesContainer.css';
 
@@ -50,7 +49,6 @@ export function ResourcesContainer() {
         },
     };
 
-
     return (
         <div className='resourcesContainer'>
             <div className='max-width'>
@@ -64,9 +62,6 @@ export function ResourcesContainer() {
                     ))}
                 </div>
             </div>
-
-
-
         </div>
     )
 }

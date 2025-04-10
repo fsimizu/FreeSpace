@@ -1,12 +1,11 @@
 import React from "react";
-import './hero.css';
 import { Link } from 'react-router-dom';
+import './hero.css';
 
 export function Hero() {
 
   return (
     <div id="heroHome" className="hero__container">
-      
       <div className="hero__body max-width">
 
         <div className="hero__content">

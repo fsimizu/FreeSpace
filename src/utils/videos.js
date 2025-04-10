@@ -70,7 +70,7 @@ export const buttons = {
     }
   },
   filipino: {
-    title: 'Filipino',
+    title: 'Filipino Mock Tests',
     videos: {
       video_1: {
         type: 'Mock test',
@@ -147,7 +147,7 @@ export const buttons = {
         name: 'Coming Soon',
         subtopic: 'Health Pension',
         enabled: false,
-        url: 'https://www.youtube.com/embed/w3y2q-RSj6c'
+        url: ''
       },
       video_3: {
         type: 'Mock test',
@@ -155,13 +155,45 @@ export const buttons = {
         name: 'Employment',
         subtopic: 'Recruitment Agency',
         enabled: true,
-        url: 'https://www.youtube.com/embed/KkxkiJ2m-sw'
+        url: 'https://www.youtube.com/embed/ISorOBTDNnc'
       },
       video_4: {
         type: 'Mock test',
         order: 4,
         name: 'Coming soon',
         subtopic: 'Opening a Bank Account',
+        enabled: false,
+        url: ''
+      },
+      video_5: {
+        type: 'Mock test',
+        order: 5,
+        name: 'Coming soon',
+        subtopic: 'Police Incident',
+        enabled: false,
+        url: ''
+      },
+      video_6: {
+        type: 'Mock test',
+        order: 6,
+        name: 'Legal',
+        subtopic: 'Property Dispute',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/kXMEgZSG0qQ'
+      },
+      video_7: {
+        type: 'Mock test',
+        order: 7,
+        name: 'Medical',
+        subtopic: 'Surgery Concerns',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/IE0edCoUhd8'
+      },
+      video_8: {
+        type: 'Mock test',
+        order: 8,
+        name: 'Coming soon',
+        subtopic: 'Hotel Booking',
         enabled: false,
         url: ''
       }
@@ -173,34 +205,66 @@ export const buttons = {
       video_1: {
         type: 'Mock test',
         order: 1,
-        name: 'Education',
+        name: 'Coming Soon',
         subtopic: 'School Enrolment',
-        enabled: true,
-        url: 'https://www.youtube.com/embed/NzDtQCepMvM'
+        enabled: false,
+        url: ''
       },
       video_2: {
         type: 'Mock test',
         order: 2,
         name: 'Social Services',
         subtopic: 'Health Pension',
-        enabled: false,
-        url: 'https://www.youtube.com/embed/w3y2q-RSj6c'
+        enabled: true,
+        url: 'https://www.youtube.com/embed/LV-1xldflKA'
       },
       video_3: {
         type: 'Mock test',
         order: 3,
-        name: 'Employment',
+        name: 'Coming soon',
         subtopic: 'Recruitment Agency',
-        enabled: true,
-        url: 'https://www.youtube.com/embed/KkxkiJ2m-sw'
+        enabled: false,
+        url: ''
       },
       video_4: {
         type: 'Mock test',
         order: 4,
         name: 'Coming soon',
         subtopic: 'Opening a Bank Account',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/Ay9KOwvtSx8'
+      },
+      video_5: {
+        type: 'Mock test',
+        order: 5,
+        name: 'Coming soon',
+        subtopic: 'Police Incident',
         enabled: false,
         url: ''
+      },
+      video_6: {
+        type: 'Mock test',
+        order: 6,
+        name: 'Legal',
+        subtopic: 'Property Dispute',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/j6QkV50wfi8'
+      },
+      video_7: {
+        type: 'Mock test',
+        order: 7,
+        name: 'Medical',
+        subtopic: 'Surgery Concerns',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/qoe2csbvwO8'
+      },
+      video_8: {
+        type: 'Mock test',
+        order: 8,
+        name: 'General',
+        subtopic: 'Hotel Booking',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/wV-wQFXEl4I'
       }
     }
   },
@@ -213,7 +277,7 @@ export const buttons = {
         name: 'Work & Employment',
         subtopic: '',
         enabled: true,
-        url: 'https://www.youtube.com/embed/24yehAtCo1A'
+        url: 'https://www.youtube.com/embed/y6pq4JyLqlo'
       },
       video_2: {
         type: 'Vocabulary',
@@ -221,7 +285,20 @@ export const buttons = {
         name: 'Medical & Health',
         subtopic: '',
         enabled: true,
-        url: 'https://www.youtube.com/embed/y6pq4JyLqlo'
+        url: 'https://www.youtube.com/embed/24yehAtCo1A'
+      },
+    }
+  },
+  tips: {
+    title: 'Tips & Strategies',
+    videos: {
+      video_1: {
+        type: 'Tips',
+        order: 1,
+        name: 'Coming soon',
+        subtopic: '',
+        enabled: false,
+        url: ''
       },
     }
   },
