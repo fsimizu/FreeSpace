@@ -7,7 +7,7 @@ export function ResourcesContainer() {
     const cards = {
         tips: {
             name: 'tips',
-            longName: 'Tips & Strategies',
+            longName: 'Tips & Strategies (Coming soon)',
             description: "Expert tips, memory tricks, and note-taking techniques for confidence and accuracy.",
             imgUrl: '/images/tips.png',
             icon: <Search size={18} color={'var(--purple)'} />

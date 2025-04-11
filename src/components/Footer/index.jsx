@@ -61,7 +61,7 @@ export function Footer() {
                             <i className="fa-regular fa-envelope"></i>
                             <h6>Email</h6>
                         </div>
-                        <a href="mailto:hello@freespacelearn.com?subject=Hello"><p>hello@freespacelearn.com</p></a>
+                        <a href="mailto:freespacelearn@gmail.com?subject=Hello"><p>freespacelearn@gmail.com</p></a>
                     </div>
 
                     <div className="footer__social">

@@ -4,7 +4,9 @@ export function Video({ videoUrl }) {
   return (
     <div className='video'>
         <iframe
-          src={videoUrl}>
+          src={videoUrl}
+          allowFullScreen
+          >
         </iframe>
     </div>
   )

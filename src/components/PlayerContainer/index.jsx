@@ -23,7 +23,7 @@ export function PlayerContainer({ buttons }) {
             </span>
           ) : (
             <span>
-              <i className="fa-solid fa-bars videos__button-more"></i> Videos
+              <i className="fa-solid fa-bars videos__button-more"></i>Videos
             </span>
           )}
 
