@@ -205,10 +205,10 @@ export const buttons = {
       video_1: {
         type: 'Mock test',
         order: 1,
-        name: 'Coming Soon',
+        name: 'Education',
         subtopic: 'School Enrolment',
-        enabled: false,
-        url: ''
+        enabled: true,
+        url: 'https://www.youtube.com/embed/DFWB3ERAAMc'
       },
       video_2: {
         type: 'Mock test',
