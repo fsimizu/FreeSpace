@@ -1,4 +1,4 @@
-import { BookOpenText, Headset, Search } from "lucide-react";
+import { NotebookPen, BookOpenText, Headset, Search } from "lucide-react";
 import { Resource } from '../Resource';
 
 import './resourcesContainer.css';
@@ -18,6 +18,13 @@ export function ResourcesContainer() {
             description: "Build your language skills with key vocabulary and exercises.",
             imgUrl: '/images/vocabulary.png',
             icon: <BookOpenText size={18} color={'var(--orange)'} />
+        },
+        blog: {
+            name: 'blog',
+            longName: 'Blog',
+            description: "All you need to know to ace your exam",
+            imgUrl: '/images/blog.jpg',
+            icon: <NotebookPen size={18} color={'var(--green)'} />
         },
         spanish: {
             name: 'spanish',

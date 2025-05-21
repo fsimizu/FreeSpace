@@ -1,0 +1,5 @@
+.blogContainer {
+    padding-top: 0px;
+    padding-left: var(--padding-sides) !important;
+    padding-right: var(--padding-sides) !important;
+}

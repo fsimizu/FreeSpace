@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './breadcrumb.css';
 
 export function Breadcrumb({ items }) {
+  let currentPath = '';
+
   return (
     <nav className="breadcrumb">
       <div className="max-width breadcrumb-body">
@@ -12,20 +14,26 @@ export function Breadcrumb({ items }) {
             <span className='greater'> &gt; </span>
           </li>
 
-          {items.map((item, index) => (
+          {items.map((item, index) => {
+            let linkPath = currentPath;
+            if (index < items.length - 1) {
+              currentPath  += `/${item.name}`;
+            }
 
-            <li key={index}>
-              {index === items.length - 1 ? (
-                <span>{item.name}</span>
-              ) : (
-                <Link to={`/${item.name}`}>
-                  {item.name}
-                </Link>
-              )}
-              {index < items.length - 1 && <span className='greater'> &gt; </span>}
+            return (
+              <li key={index}>
+                {index === items.length - 1 ? (
+                  <span>{item.name}</span>
+                ) : (
+                  <Link to={currentPath}>
+                    {item.name}
+                  </Link>
+                )}
+                {index < items.length - 1 && <span className='greater'> &gt; </span>}
 
-            </li>
-          ))}
+              </li>
+            )
+          })}
         </ul>
 
       </div>
