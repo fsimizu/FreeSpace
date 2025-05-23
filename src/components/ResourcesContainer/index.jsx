@@ -23,7 +23,7 @@ export function ResourcesContainer() {
             name: 'blog',
             longName: 'Blog',
             description: "All you need to know to ace your exam",
-            imgUrl: '/images/blog.jpg',
+            imgUrl: '/images/blog.png',
             icon: <NotebookPen size={18} color={'var(--green)'} />
         },
         spanish: {

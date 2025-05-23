@@ -28,7 +28,8 @@ export const BlogPostContent = () => {
   return (
     <div className="blogContent">
       <div className="max-width blogContent-body">     
-        <ReactMarkdown>{markdownBody}</ReactMarkdown>
+        <ReactMarkdown>{markdownBody}
+        </ReactMarkdown>
       </div>
     </div>
   );
