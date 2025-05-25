@@ -5,9 +5,7 @@ slug: what-is-ccl
 tags: [NAATI, CCL, visa, getting-started]
 ---
 
-&nbsp;
-
-## What is the CCL Test?
+# **What is the CCL Test?**
 
 _Are you planning to apply for the **points-based** permanent residency visa in Australia?_  
 _Did you know that passing the NAATI Credential Community Language (CCL) test can help you earn 5 additional points towards your Skilled Independent Visa?_

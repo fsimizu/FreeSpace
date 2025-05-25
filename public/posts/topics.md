@@ -6,8 +6,6 @@ excerpt: Vocab
 tags: [naati, ccl, topics, vocabulary]
 ---
 
-&nbsp;
-
 ## Topics & Vocabulary
 
 &nbsp;

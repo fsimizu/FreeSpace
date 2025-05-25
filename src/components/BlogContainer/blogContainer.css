@@ -18,10 +18,49 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 
+
 .blogPost_button {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 30px;
     text-decoration: none;
     color: inherit;
+}
+
+.blogPost_image{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blogPost_date {
+    color: var(--grey);
+    font-weight: lighter;
+}
+
+.blogPost_excerpt {
+    display: none;
+}
+
+.blogPost_text {
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+
+    .blogPost_button {
+        flex-direction: row;
+    }
+    .blogPost_image{
+        max-width: 220px;
+    }
+    .blogPost_excerpt {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .blogPost_text {
+        text-align: left;
+    }
 }
