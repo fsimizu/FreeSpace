@@ -30,7 +30,7 @@
 .resource__container .card-text{
     margin-bottom: 0px;
     color: grey;
-    font-size: 0.8rem;
+    /* font-size: rem; */
 }
 
 .resource-img {

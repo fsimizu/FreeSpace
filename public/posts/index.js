@@ -4,7 +4,7 @@ export const posts = [
     date: "May 12, 2025",
     path: "/posts/what-is-ccl.md",
     slug: "what-is-ccl",
-    excerpt: "Are you planning to apply for the points-based PR visa in Australia? Did you know that passing...",
+    excerpt: "Thinking of applying for a points-based PR visa in Australia? Did you know that passing...",
     img: "images/what-is-ccl.png"
   },
   {
@@ -12,7 +12,7 @@ export const posts = [
     date: "May 19, 2025",
     path: "/posts/topics.md",
     slug: "topics",
-    excerpt: "According to the official NAATI website, the below are the most common topics you may encounter...",
+    excerpt: "A quick list to what might pop up on your test — and how to prep for it...",
     img: "images/topics.png"
   },
   {
@@ -20,7 +20,7 @@ export const posts = [
     date: "May 23, 2025",
     path: "/posts/penalties.md",
     slug: "penalties",
-    excerpt: "Do you know how the CCL is assessed? NAATI uses the deduction method...",
+    excerpt: "Do you know how the CCL is assessed? Let’s talk about how the CCL is actually marked...",
     img: "images/assessment.png"
   },
 ];

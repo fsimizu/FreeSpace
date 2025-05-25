@@ -8,13 +8,19 @@ tags: [naati, ccl, topics, vocabulary]
 
 ## Topics & Vocabulary
 
+_A quick list to what might pop up on your test — and how to prep for it_
+
 &nbsp;
 
 _BY **FREESPACE LEARNING** | 19 MAY, 2025_
 
 ---
 
-According to the official NAATI website, the below are the most common topics you may encounter in the exam. We have available some of the vocabulary sheets for some of these. Simply click on the topic and download it **FOR FREE** for you to practice.
+If you’ve been wondering what kinds of topics come up in the CCL test — don’t stress, I’ve got you covered. 😌
+
+According to the official NAATI site, these are the most common areas you’ll hear about in the exam. And because we know how tricky it can be to remember all the right words under pressure, we’ve put together some vocab sheets to help you study smarter (not harder).
+
+Yup — they’re **FREE** to download. Just click on the links and start brushing up on your lingo:
 
 * Business
 * Consumer Affairs
@@ -29,7 +35,17 @@ According to the official NAATI website, the below are the most common topics yo
 * Insurance
 * Social Services
 
-More are coming soon, so stay tuned!
+We're working on more — so if the topic you need isn’t there yet, hang tight!
+Or better yet, shoot me a message and let me know which one you’re after — that way I can bump it up the list. 😊
+
+&nbsp;
+&nbsp;
+
+If you liked this and want to help me make more like it, you can buy me a coffee [here](https://Ko-fi.com/fs_learn). No pressure — but I’d really appreciate it! 💛
+
+&nbsp;
+
+---
 
 _References_  
 _[National Accreditation Authority for Translators and Interpreters](https://www.naati.com.au/)_
