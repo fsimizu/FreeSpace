@@ -29,7 +29,7 @@ Yup — they’re **FREE** to download. Just click on the links and start brushi
 * Immigration / Settlement
 * Legal
 * Community
-* Education
+* [Education](https://drive.google.com/file/d/1e2I0juBjX0PR5OKorjAY6Ap5z-qV35zq/view?usp=drive_link)
 * Financial
 * Housing
 * Insurance
