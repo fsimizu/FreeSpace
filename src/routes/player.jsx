@@ -5,6 +5,7 @@ import { Instructions } from "../components/Instructions/index.jsx";
 import { PlayerContainer } from "../components/PlayerContainer/index.jsx";
 import { Layout } from "../layout/Layout.jsx";
 import { generateBreadcrumbItems } from "../utils/functions.js";
+import { Shop } from "../components/Shop/index.jsx";
 
 export function Player({ buttons }) {
   const location = useLocation();
@@ -16,6 +17,7 @@ export function Player({ buttons }) {
         <Breadcrumb items={breadcrumbItems} />
         <PlayerContainer buttons={buttons}/>
         <Instructions />
+        <Shop buttons={buttons}/>
       </Layout>
     </div>
   );

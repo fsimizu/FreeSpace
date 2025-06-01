@@ -67,6 +67,17 @@ export const buttons = {
         enabled: false,
         url: ''
       }
+    },
+    shop: {
+
+      prod_1: {
+        id: '4055424131',
+        title: 'SPANISH NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Spanish dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/spanish_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/4055424131'
+      }
+
     }
   },
   filipino: {
@@ -101,8 +112,8 @@ export const buttons = {
         order: 4,
         name: 'Finance',
         subtopic: 'Opening a Bank Account',
-        enabled: false,
-        url: ''
+        enabled: true,
+        url: 'https://www.youtube.com/embed/yKN26vRw-BY'
       },
       video_5: {
         type: 'Mock test',
@@ -127,6 +138,23 @@ export const buttons = {
         subtopic: 'Surgery Concerns',
         enabled: false,
         url: ''
+      },
+      video_8: {
+        type: 'Mock test',
+        order: 8,
+        name: 'General',
+        subtopic: 'Hotel Booking',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/RC-4qv62BEQ'
+      }
+    },
+    shop: {
+      prod_1: {
+        id: 'c352ff3e73',
+        title: 'FILIPINO NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/filipino_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
       }
     }
   },
@@ -144,10 +172,10 @@ export const buttons = {
       video_2: {
         type: 'Mock test',
         order: 2,
-        name: 'Coming Soon',
+        name: 'Social Services',
         subtopic: 'Health Pension',
-        enabled: false,
-        url: ''
+        enabled: true,
+        url: 'https://www.youtube.com/embed/fVNzQhhwHcs'
       },
       video_3: {
         type: 'Mock test',
@@ -197,6 +225,15 @@ export const buttons = {
         enabled: false,
         url: ''
       }
+    },
+    shop: {
+      prod_1: {
+        id: 'c352ff3e73',
+        title: 'FILIPINO NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/filipino_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
+      }
     }
   },
   portuguese: {
@@ -229,7 +266,7 @@ export const buttons = {
       video_4: {
         type: 'Mock test',
         order: 4,
-        name: 'Coming soon',
+        name: 'Finance',
         subtopic: 'Opening a Bank Account',
         enabled: true,
         url: 'https://www.youtube.com/embed/Ay9KOwvtSx8'
@@ -266,6 +303,15 @@ export const buttons = {
         enabled: true,
         url: 'https://www.youtube.com/embed/wV-wQFXEl4I'
       }
+    },
+    shop: {
+      prod_1: {
+        id: '7a06db6af2',
+        title: 'PORTUGUESE NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Portuguese dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/portuguese_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/7a06db6af2'
+      },
     }
   },
   vocabulary: {
@@ -287,6 +333,29 @@ export const buttons = {
         enabled: true,
         url: 'https://www.youtube.com/embed/24yehAtCo1A'
       },
+    },
+    shop: {
+      prod_1: {
+        id: '7a06db6af2',
+        title: 'PORTUGUESE NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Portuguese dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/portuguese_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/7a06db6af2'
+      },
+      prod_2: {
+        id: '4055424131',
+        title: 'SPANISH NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Spanish dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/spanish_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/4055424131'
+      },
+      prod_3: {
+        id: 'c352ff3e73',
+        title: 'FILIPINO NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/filipino_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
+      }
     }
   },
   tips: {
@@ -300,6 +369,29 @@ export const buttons = {
         enabled: false,
         url: ''
       },
+    },
+    shop: {
+      prod_1: {
+        id: '7a06db6af2',
+        title: 'PORTUGUESE NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Portuguese dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/portuguese_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/7a06db6af2'
+      },
+      prod_2: {
+        id: '4055424131',
+        title: 'SPANISH NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Spanish dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/spanish_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/4055424131'
+      },
+      prod_3: {
+        id: 'c352ff3e73',
+        title: 'FILIPINO NAATI CCL real dialog #11 - Medical | Sleeping issues',
+        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/filipino_11.png",
+        kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
+      }
     }
   },
 };
