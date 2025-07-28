@@ -76,6 +76,13 @@ export const buttons = {
         description: "Real NAATI CCL Spanish dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
         image_path: "/images/spanish_11.png",
         kofi_prod_url: 'https://ko-fi.com/s/4055424131'
+      },
+      prod_2: {
+        id: '5d9a17ae6e',
+        title: 'SPANISH NAATI CCL real dialog #12 - Education | Swimming lessons',
+        description: "Real NAATI CCL Spanish dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/spanish_12.png",
+        kofi_prod_url: 'https://ko-fi.com/s/5d9a17ae6e'
       }
 
     }
@@ -155,6 +162,13 @@ export const buttons = {
         description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
         image_path: "/images/filipino_11.png",
         kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
+      },
+      prod_2: {
+        id: 'd0e34fb46d',
+        title: 'FILIPINO NAATI CCL real dialog #12 - Education | Swimming lessons',
+        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/filipino_12.png",
+        kofi_prod_url: 'https://ko-fi.com/s/d0e34fb46d'
       }
     }
   },
@@ -228,11 +242,11 @@ export const buttons = {
     },
     shop: {
       prod_1: {
-        id: 'c352ff3e73',
-        title: 'FILIPINO NAATI CCL real dialog #11 - Medical | Sleeping issues',
-        description: "Real NAATI CCL Filipino dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
-        image_path: "/images/filipino_11.png",
-        kofi_prod_url: 'https://ko-fi.com/s/c352ff3e73'
+        id: 'a85a72504b',
+        title: 'FRENCH NAATI CCL real dialog #12 - Education | Swimming lessons',
+        description: "Real NAATI CCL French dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
+        image_path: "/images/french_12.png",
+        kofi_prod_url: 'https://ko-fi.com/s/a85a72504b'
       }
     }
   },
@@ -274,10 +288,10 @@ export const buttons = {
       video_5: {
         type: 'Mock test',
         order: 5,
-        name: 'Coming soon',
-        subtopic: 'Police Incident',
-        enabled: false,
-        url: ''
+        name: 'Legal',
+        subtopic: 'Incident with Police',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/jnILKjGFojE'
       },
       video_6: {
         type: 'Mock test',
@@ -311,7 +325,7 @@ export const buttons = {
         description: "Real NAATI CCL Portuguese dialogue with transcripts—perfect for exam practice. Includes real past test content to help you prepare, improve accuracy, and boost your chances of success.",
         image_path: "/images/portuguese_11.png",
         kofi_prod_url: 'https://ko-fi.com/s/7a06db6af2'
-      },
+      }
     }
   },
   vocabulary: {
@@ -333,6 +347,15 @@ export const buttons = {
         enabled: true,
         url: 'https://www.youtube.com/embed/24yehAtCo1A'
       },
+      video_3: {
+        type: 'Vocabulary',
+        order: 3,
+        name: 'Education',
+        subtopic: '',
+        enabled: true,
+        url: 'https://www.youtube.com/embed/z_Hwd236cJY'
+      },
+
     },
     shop: {
       prod_1: {
