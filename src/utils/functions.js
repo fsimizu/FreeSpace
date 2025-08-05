@@ -24,8 +24,24 @@ export function generateBreadcrumbItems(pathname) {
 export const ScrollToTop = () => {
     const { pathname } = useLocation();
     useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [pathname]);
     return null;
-  };
-  
+};
+
+
+export async function getVideos(language) {
+    const response = await fetch(`/api/language/${language}/videos`);
+    // const response = await fetch(
+    //     `https://free-space.vercel.app/api/language/${language}/videos`
+    //   );
+    
+    if (!response.ok) throw new Error("Failed to fetch videos");
+    const contentType = response.headers.get("content-type");
+    
+    if (!contentType || !contentType.includes("application/json")) {
+        throw new Error(`Unexpected response type: ${contentType}`);
+    }
+    
+    return response.json();
+}
