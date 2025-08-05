@@ -31,10 +31,10 @@ export const ScrollToTop = () => {
 
 
 export async function getVideos(language) {
-    const response = await fetch(`/api/language/${language}/videos`);
-    // const response = await fetch(
-    //     `https://free-space.vercel.app/api/language/${language}/videos`
-    //   );
+    // const response = await fetch(`/api/language/${language}/videos`);
+    const response = await fetch(
+        `https://free-space-sgiiuuof3-fsimizus-projects.vercel.app/api/language/${language}/videos`
+      );
     
     if (!response.ok) throw new Error("Failed to fetch videos");
     const contentType = response.headers.get("content-type");
