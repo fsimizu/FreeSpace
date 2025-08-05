@@ -1,0 +1,85 @@
+.recorder__container{
+    padding: var(--padding-sections);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.recorder__container .max-width{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.recorder__recording {
+    width: 100%;
+}
+
+.controls button {
+    font-size: 0.8rem;
+    background-color: var(--main-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0.4rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    /* font-size: 16px; */
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+
+.audio-playback {
+    /* margin-top: 30px; */
+    /* border-top: 1px solid #eee; */
+    /* padding-bottom: 10px; */
+}
+
+audio {
+    width: 100%;
+    /* margin-top: 10px; */
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    25% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.status-recording {
+    font-size: 0.8rem;
+    /* margin-top: 15px; */
+    /* color: #666; */
+    font-style: italic;
+    /* border: 1px solid var(--grey); */
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    animation: blink 2s linear infinite;
+}
+
+
+.recording {
+    display: inline-block;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border-left-color: var(--main-blue);
+    animation: spin 1s linear infinite;
+    position: relative;
+    top: 3px;
+
+  }
+
+  #attempts {
+    font-size: 0.8rem;
+    margin-left: 25%;
+  }
+
+  @media (min-width: 768px) {
+    .recorder__recording {
+        width: 50%;
+        min-width: 600px;
+    }
+}
