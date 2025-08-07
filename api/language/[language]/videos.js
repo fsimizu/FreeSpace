@@ -1,31 +1,32 @@
 export default async function handler(req, res) {
-    const { language } = req.query;
-
-    try {
-      const response = await fetch(
-        `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,        
-        {
-          method: "GET",
-          headers: {
-            "x-api-key": process.env.VITE_API_GATEWAY_KEY, // secure
-          },
-        }
-      );
-        
-      const contentType = response.headers.get("content-type");
-
-      if (!response.ok || !contentType.includes("application/json")) {
-        const text = await response.text(); // get full error
-        console.error("Non-JSON response from API Gateway:", text);
-        return res.status(500).json({ error: "Bad response from API Gateway" });
+  console.log("Function is running"); // ✅ Log entry point
+  const { language } = req.query;
+  console.log("Language param:", language); // ✅ Log parameter
+  try {
+    const response = await fetch(
+      `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,
+      {
+        method: "GET",
+        headers: {
+          "x-api-key": process.env.VITE_API_GATEWAY_KEY || "missing-key",
+        },
       }
-  
-      const data = await response.json();
-      res.setHeader("Content-Type", "application/json");
-      res.status(response.status).json(data);
-    } catch (err) {
-      console.error("Fetch error:", err);
-      res.status(500).json({ error: "Failed to fetch data" });
+    );
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      const text = await response.text();
+      console.error("Unexpected content type:", contentType);
+      console.error("Raw response body:", text);
+      return res.status(500).json({ error: "Unexpected response type" });
     }
+
+    const data = await response.json();
+    console.log("Fetched data:", data);
+    res.setHeader("Content-Type", "application/json");
+    res.status(response.status).json(data);
+  } catch (err) {
+    console.error("FETCH ERROR:", err);  // Make sure this runs
+    res.status(500).json({ error: "Failed to fetch data" });
   }
-  
+}
