@@ -7,7 +7,7 @@ export default async function handler(req, res) {
         {
           method: "GET",
           headers: {
-            "x-api-key": process.env.API_GATEWAY_KEY, // secure
+            "x-api-key": import.meta.env.VITE_API_GATEWAY_KEY, // secure
           },
         }
       );
