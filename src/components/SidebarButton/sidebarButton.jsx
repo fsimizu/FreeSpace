@@ -13,7 +13,7 @@ export function SidebarButton({ setVideoUrl, buttons, setIsSidebarOverlay, isAct
             }
             className={`sidebar__button ${buttons.enabled ? '' : 'disabled'} ${isActive ? 'active' : ''}`}
         >
-            <strong>#{buttons.order}</strong>: {buttons.name}
+            <strong>#{buttons.order}</strong>: {buttons.topic}
         </div>
     )
 }

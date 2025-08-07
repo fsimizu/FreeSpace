@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-
     const { language } = req.query;
 
     try {
@@ -12,7 +11,7 @@ export default async function handler(req, res) {
           },
         }
       );
-  
+        
       const data = await response.json();
       res.setHeader("Content-Type", "application/json");
       res.status(response.status).json(data);

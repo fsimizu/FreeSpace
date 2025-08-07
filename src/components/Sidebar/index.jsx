@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { SidebarButton } from '../SidebarButton/sidebarButton';
 import './sidebar.css';
 
-export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }) {
+export function Sidebar({ setVideoUrl, videoData, isOverlay, setIsSidebarOverlay }) {
   const [isCompact, setIsCompact] = useState(false);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0)
 
@@ -24,14 +24,15 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
     };
   }, []);
 
-  useEffect(() => {
-    if (buttons.videos && Object.values(buttons.videos).length > 0) {
-      const firstVideo = Object.values(buttons.videos)[0];
-      if (firstVideo.enabled) {
-        setVideoUrl(`${firstVideo.url}`);
-      }
-    }
-  }, [buttons.videos, setVideoUrl]);
+  // useEffect(() => {
+  //   if (videoData && Object.values(videoData).length > 0) {
+  //     const firstVideo = Object.values(videoData)[0];
+  //     if (firstVideo.enabled) {
+  //       setVideoUrl(`${firstVideo.url}`);
+  //     }
+  //     console.log(videoData)
+  //   }
+  // }, [videoData, setVideoUrl]);
 
   const handleButtonClick = (url, index) => {
     setVideoUrl(url);
@@ -59,7 +60,9 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
         ) : (
           <div>
             <ul>
-              {Object.values(buttons.videos).map((video, index) => (
+              {Object.values(videoData)
+              .sort((a, b) => Number(a.order) - Number(b.order))
+              .map((video, index) => (
                 <li key={index}>
                   <SidebarButton
                     setVideoUrl={handleButtonClick}
@@ -71,6 +74,7 @@ export function Sidebar({ setVideoUrl, buttons, isOverlay, setIsSidebarOverlay }
                 </li>
               ))}
             </ul>
+
           </div>
         )}
       </div>

@@ -15,12 +15,12 @@ import { Post } from './routes/post.jsx';
 const router = createBrowserRouter([
     { path: "/", element: <Root />},
     { path: "/resources", element: <Resources />},
-    { path: "/resources/spanish", element: <Player buttons={buttons.spanish}/>},
-    { path: "/resources/filipino", element: <Player buttons={buttons.filipino}/>},
-    { path: "/resources/french", element: <Player buttons={buttons.french}/>},
-    { path: "/resources/portuguese", element: <Player buttons={buttons.portuguese}/>},
-    { path: "/resources/vocabulary", element: <Player buttons={buttons.vocabulary}/>},
-    { path: "/resources/tips", element: <Player buttons={buttons.tips}/>},
+    { path: "/resources/spanish", element: <Player buttons={buttons.spanish} video='spanish'/>},
+    { path: "/resources/filipino", element: <Player buttons={buttons.filipino} video='filipino'/>},
+    { path: "/resources/french", element: <Player buttons={buttons.french} video='french'/>},
+    { path: "/resources/portuguese", element: <Player buttons={buttons.portuguese} video='portuguese'/>},
+    { path: "/resources/vocabulary", element: <Player buttons={buttons.vocabulary} video='vocabulary'/>},
+    { path: "/resources/tips", element: <Player buttons={buttons.tips} video='tips'/>},
     { path: "/resources/blog", element: <Blog />},
     { path: "/resources/blog/:slug", element: <Post />},
     { path: "*", element: <NotFound />}

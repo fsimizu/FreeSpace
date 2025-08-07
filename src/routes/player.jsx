@@ -6,7 +6,7 @@ import { PlayerContainer } from "../components/PlayerContainer/index.jsx";
 import { Layout } from "../layout/Layout.jsx";
 import { generateBreadcrumbItems } from "../utils/functions.js";
 
-export function Player({ buttons }) {
+export function Player({ buttons, video }) {
   const location = useLocation();
   const breadcrumbItems = generateBreadcrumbItems(location.pathname);
 
@@ -14,7 +14,7 @@ export function Player({ buttons }) {
     <div>
       <Layout>
         <Breadcrumb items={breadcrumbItems} />
-        <PlayerContainer buttons={buttons}/>
+        <PlayerContainer buttons={buttons} video={video}/>
         <Instructions />
       </Layout>
     </div>

@@ -1,26 +1,8 @@
 import React, { useEffect }  from "react";
 import { Link } from 'react-router-dom';
 import './hero.css';
-import { getVideos } from "../../utils/functions";
 
 export function Hero() {
-
-
-
-// Usage in component
-useEffect(() => {
-  async function loadVideos() {
-    try {
-      const data = await getVideos("spanish");
-      console.log(data);
-    } catch (err) {
-      console.error(err);
-    }
-  }
-  loadVideos();
-}, []);
-
-
 
 
   return (
