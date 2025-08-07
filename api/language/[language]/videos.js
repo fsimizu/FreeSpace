@@ -4,7 +4,8 @@ export default async function handler(req, res) {
   console.log("Language param:", language); // ✅ Log parameter
   try {
     const response = await fetch(
-      `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,
+      // `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,
+      `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/spanish/videos`,
       {
         method: "GET",
         headers: {
