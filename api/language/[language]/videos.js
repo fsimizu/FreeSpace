@@ -12,11 +12,19 @@ export default async function handler(req, res) {
         }
       );
         
+      const contentType = response.headers.get("content-type");
+
+      if (!response.ok || !contentType.includes("application/json")) {
+        const text = await response.text(); // get full error
+        console.error("Non-JSON response from API Gateway:", text);
+        return res.status(500).json({ error: "Bad response from API Gateway" });
+      }
+  
       const data = await response.json();
       res.setHeader("Content-Type", "application/json");
       res.status(response.status).json(data);
     } catch (err) {
-      console.error(err);
+      console.error("Fetch error:", err);
       res.status(500).json({ error: "Failed to fetch data" });
     }
   }
