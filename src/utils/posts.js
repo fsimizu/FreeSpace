@@ -1,10 +1,4 @@
-// src/utils/posts.js
 import matter from 'gray-matter';
-
-// --- REMOVE THESE LINES ---
-// import { readdirSync, readFileSync } from 'fs'; // NOT NEEDED IN BROWSER CONTEXT
-// import path from 'path'; // NOT NEEDED FOR SLUG EXTRACTION FROM GLOB PATH
-// --------------------------
 
 /**
  * Dynamically imports all markdown/mdx files from src/data/posts
@@ -13,40 +7,31 @@ import matter from 'gray-matter';
  * @returns {Promise<Array<Object>>} An array of post metadata objects, sorted by date.
  */
 export async function getAllPostMetadata() {
-  // Use import.meta.glob to import all files matching the pattern
-  // `eager: true` imports them synchronously at build time, giving us direct access to their content.
   const modules = import.meta.glob('../data/posts/*.{md,mdx}', { as: 'raw', eager: true });
 
   console.log("Modules found by glob:", modules);
 
   const posts = [];
 
-  for (const modulePath in modules) { // Changed 'path' to 'modulePath' to avoid confusion with Node.js `path` module
-    const fileContent = modules[modulePath]; // Raw content of the MD/MDX file
+  for (const modulePath in modules) { 
+    const fileContent = modules[modulePath]; 
 
     console.log(`--- Processing file: ${modulePath} ---`);
     console.log("Raw file content (first 200 chars):", fileContent.substring(0, 200));
 
     try {
-      // Use gray-matter to parse the frontmatter and content
       const { data: frontmatter } = matter(fileContent);
-
       console.log(`Extracted Frontmatter for ${modulePath}:`, frontmatter);
-
-      // Extract the slug directly from the modulePath provided by glob
-      // Example modulePath: "../data/posts/what-is-ccl.mdx"
-      // Split by '/' and get the last part, then remove the extension.
       const slug = modulePath.split('/').pop().replace(/\.(md|mdx)$/, '');
 
-      // Check if essential frontmatter fields are present
       if (!frontmatter.title || !frontmatter.date) {
         console.warn(`Warning: Missing 'title' or 'date' in frontmatter for ${slug}. Skipping.`);
-        continue; // Skip this post if essential data is missing
+        continue;
       }
 
       posts.push({
         slug,
-        ...frontmatter, // Spread all properties from your frontmatter
+        ...frontmatter,
       });
 
     } catch (e) {
@@ -57,7 +42,6 @@ export async function getAllPostMetadata() {
 
   console.log("Final posts array before sort:", posts);
 
-  // Sort posts by date, newest first
   const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   console.log("Sorted posts array:", sortedPosts);
 
@@ -81,9 +65,8 @@ export async function getPostBySlug(slug) {
     throw new Error(`Post with slug "${slug}" not found.`);
   }
 
-  // Import the module raw to parse with gray-matter
   const module = await modules[postPath]();
-  const fileContent = module.default || module; // For MDX, it's often `module.default` from `as: 'raw'`
+  const fileContent = module.default || module;
 
   const { data: frontmatter, content } = matter(fileContent);
 
