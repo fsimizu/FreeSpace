@@ -31,8 +31,11 @@ export const ScrollToTop = () => {
 
 
 export async function getVideos(language) {
+    const baseUrl = window.location.origin; // or hardcode your domain in production
+    const response = await fetch(`${baseUrl}/api/language/${language}/videos`);
 
-    const response = await fetch(`/api/language/${language}/videos`);
+// 
+    // const response = await fetch(`/api/language/${language}/videos`);
     // const response = await fetch(`/api/language/spanish/videos`);
     
     // const response = await fetch(
