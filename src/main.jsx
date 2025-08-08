@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     { path: "/resources/tips", element: <Player buttons={buttons.tips} video='tips'/>},
     { path: "/resources/blog", element: <Blog />},
     { path: "/resources/blog/:slug", element: <Post />},
-    // { path: "*", element: <NotFound />}
+    { path: "*", element: <NotFound />}
   ])
 
 createRoot(document.getElementById('root')).render(
