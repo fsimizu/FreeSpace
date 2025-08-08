@@ -19,6 +19,7 @@ export function Instructions() {
                 >
                     <ol>
                         <li>Play the dialogues and try to interpret along as accurately as possible.</li>
+                        <li>Record yourself as you interpret and note any mistakes.</li>
                         <li>Note vocabulary you find challenging and review to expand your linguistic range.</li>
                         <li>Compare your answers to assess areas where you can improve.</li>
                     </ol>
