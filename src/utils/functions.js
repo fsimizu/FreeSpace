@@ -34,20 +34,6 @@ export async function getVideos(language) {
     const baseUrl = window.location.origin; // or hardcode your domain in production
     const response = await fetch(`${baseUrl}/api/language/${language}/videos`);
 
-// 
-    // const response = await fetch(`/api/language/${language}/videos`);
-    // const response = await fetch(`/api/language/spanish/videos`);
-    
-    // const response = await fetch(
-    //     `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,
-    //     {
-    //       headers: {
-    //         "x-api-key": import.meta.env.VITE_API_GATEWAY_KEY,
-    //       },
-    //     }
-    //   );
-
-
     if (!response.ok) throw new Error("Failed to fetch videos");
     const contentType = response.headers.get("content-type");
     
