@@ -32,8 +32,8 @@ export const ScrollToTop = () => {
 
 export async function getVideos(language) {
 
-    // const response = await fetch(`/api/language/${language}/videos`);
-    const response = await fetch(`/api/language/spanish/videos`);
+    const response = await fetch(`/api/language/${language}/videos`);
+    // const response = await fetch(`/api/language/spanish/videos`);
     
     // const response = await fetch(
     //     `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/videos`,
