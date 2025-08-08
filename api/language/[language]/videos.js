@@ -1,6 +1,7 @@
 export default async function handler(req, res) {
   //console.log("Function is running"); // ✅ Log entry point
   const { language } = req.query;
+  console.log("[API] Called with language:", language)
   //console.log("Language param:", language); // ✅ Log parameter
 
   try {
