@@ -33,13 +33,33 @@ export const ScrollToTop = () => {
 export async function getVideos(language) {
     const baseUrl = window.location.origin; 
     const response = await fetch(`${baseUrl}/api/language/${language}/videos`);
-
     if (!response.ok) throw new Error("Failed to fetch videos");
     const contentType = response.headers.get("content-type");
-    
     if (!contentType || !contentType.includes("application/json")) {
         throw new Error(`Unexpected response type: ${contentType}`);
     }
-    
+    return response.json();
+}
+
+export async function getProducts(language) {
+    const baseUrl = window.location.origin; 
+    const response = await fetch(`${baseUrl}/api/language/${language}/products`);
+
+    // const response = await fetch(   
+    //     `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/language/${language}/products`,
+    //     {
+    //       method: "GET",
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //         "x-api-key": import.meta.env.API_GATEWAY_KEY,
+    //       },
+    //     }
+    //   );
+
+    if (!response.ok) throw new Error("Failed to fetch products");
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+        throw new Error(`Unexpected response type: ${contentType}`);
+    }
     return response.json();
 }

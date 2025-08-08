@@ -17,9 +17,6 @@ export function PlayerContainer({ buttons, video }) {
       try {
         const data = await getVideos(video);
         setVideoData(data);
-
-        // console.log(data)
-
       } catch (err) {
         console.error(err);
       }

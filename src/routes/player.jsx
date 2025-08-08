@@ -19,7 +19,7 @@ export function Player({ buttons, video }) {
         <PlayerContainer buttons={buttons} video={video}/>
         <Recorder />
         <Instructions />
-        <Shop buttons={buttons}/>
+        <Shop video={video}/>
       </Layout>
     </div>
   );
