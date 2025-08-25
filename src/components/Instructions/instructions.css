@@ -6,8 +6,9 @@
 
 .instructions__title {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-end;
+    max-width: 150px;
 }
 
 .instructions__title svg {

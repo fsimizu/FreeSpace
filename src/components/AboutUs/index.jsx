@@ -36,7 +36,6 @@ export function AboutUs() {
 
   return (
     <div id="aboutUs" className="aboutUs__container">
-
       <div className="max-width">
         <div className="about__text_container">
           <h2>The <strong>Tools</strong> You Need. The <strong>Support</strong> You Deserve</h2>

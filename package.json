@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/auth": "^6.15.0",
     "@vercel/analytics": "^1.5.0",
+    "aws-amplify": "^6.15.5",
     "bootstrap": "^5.3.3",
     "front-matter": "^4.0.2",
     "gray-matter": "^4.0.3",
@@ -24,7 +26,8 @@
     "react-router-dom": "^7.2.0",
     "react-scroll": "^1.9.3",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.22.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

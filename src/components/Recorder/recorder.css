@@ -5,7 +5,7 @@
 }
 .recorder__container .max-width{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .recorder__recording {
@@ -21,19 +21,11 @@
     margin: 0.4rem 1.2rem;
     border-radius: 20px;
     cursor: pointer;
-    /* font-size: 16px; */
     transition: background-color 0.3s ease;
 }
 
 .controls button:hover:not(:disabled) {
     background-color: #0056b3;
-}
-
-
-.audio-playback {
-    /* margin-top: 30px; */
-    /* border-top: 1px solid #eee; */
-    /* padding-bottom: 10px; */
 }
 
 audio {
@@ -47,18 +39,12 @@ audio {
     100% {opacity: 1;}
   }
 
-.status-recording {
+
+.status-message {
     font-size: 0.8rem;
-    /* margin-top: 15px; */
-    /* color: #666; */
     font-style: italic;
-    /* border: 1px solid var(--grey); */
-    border-radius: 4px;
-    padding: 0.4rem 1rem;
     animation: blink 2s linear infinite;
 }
-
-
 .recording {
     display: inline-block;
     border: 4px solid rgba(0, 0, 0, 0.1);
@@ -69,12 +55,11 @@ audio {
     animation: spin 1s linear infinite;
     position: relative;
     top: 3px;
-
   }
 
   #attempts {
     font-size: 0.8rem;
-    margin-left: 25%;
+    margin-left: 2.5rem;
   }
 
   @media (min-width: 768px) {
@@ -82,4 +67,12 @@ audio {
         width: 50%;
         min-width: 600px;
     }
+    #attempts {
+        margin-left: 20%;
+      }
+}
+@media (min-width: 470px) {
+    #attempts {
+        margin-left: 25%;
+      }
 }

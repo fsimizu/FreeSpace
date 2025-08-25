@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { getCurrentUser, fetchUserAttributes } from "aws-amplify/auth";
 import { Link, useLocation } from 'react-router-dom';
 import { scrollTo } from "../../utils/functions";
-
+import { UserContext } from "../../context/UserContext";
+import {CircleUser, User} from "lucide-react"
 import './navbar.css';
 
 export function Navbar() {
@@ -58,6 +60,7 @@ export function Navbar() {
   }, []);
 
   const [brandFilter, setBrandFilter] = useState('none');
+  
   useEffect(() => {
     const updateFilter = () => {
       if (window.innerWidth < 768) {
@@ -78,6 +81,8 @@ export function Navbar() {
     };
   }, []);
 
+const { attributes } = useContext(UserContext);
+
   return (
     <div className="navbar__container"
       style={{
@@ -89,6 +94,9 @@ export function Navbar() {
       <div id="myNav" className="overlay" >
         <a className="closebtn" onClick={handleCloseClick}>&times;</a>
         <div className="overlay-content">
+        <Link to="/login">
+            <div onClick={() => { handleCloseClick }}>Login</div>
+          </Link>
           <Link to="/">
             <div onClick={() => { handleCloseClick; handleScroll('heroHome') }}>Home</div>
           </Link>
@@ -157,6 +165,19 @@ export function Navbar() {
                 <Link to="https://ko-fi.com/fs_learn">
                   <div className="nav-link">Support us</div>
                 </Link>
+              </li>
+              <li className="nav-item">
+
+
+                <Link to="/login">
+
+                {attributes ? (
+                  <div className="nav-link"><CircleUser size="1.2rem"/> {attributes.given_name}</div>
+                ) : (
+                    <div className="nav-link">Login</div>
+                  )}
+                  </Link>
+
               </li>
             </ul>
           </div>

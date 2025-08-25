@@ -63,3 +63,27 @@ export async function getProducts(language) {
     }
     return response.json();
 }
+
+
+export async function getAudio(videoId) {
+    const baseUrl = window.location.origin; 
+    // const response = await fetch(`${baseUrl}/api/videos/${videoId}/segments`);
+
+    const response = await fetch(   
+        `https://nulv0bq4m1.execute-api.us-east-1.amazonaws.com/dev/videos/${videoId}/segments`,
+        {
+          method: "GET",
+          headers: {
+            'Content-Type': 'application/json',
+            "x-api-key": import.meta.env.API_GATEWAY_KEY,
+          },
+        }
+      );
+
+    if (!response.ok) throw new Error("Failed to fetch products");
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+        throw new Error(`Unexpected response type: ${contentType}`);
+    }
+    return response.json();
+}

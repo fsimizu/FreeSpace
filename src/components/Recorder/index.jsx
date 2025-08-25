@@ -5,15 +5,6 @@ import './recorder.css';
 
 export function Recorder() {
 
-    // Audio Player
-    const [audioStatus, setAudioStatus] = useState('Waiting to play...');
-
-    const handleAudioEnded = () => {
-        setAudioStatus('Audio playback has finished!');
-        alert('The audio has finished playing!');
-    };
-
-
     // Recorder
     const [isRecording, setIsRecording] = useState(false);
     const [audioURL, setAudioURL] = useState('');
@@ -97,19 +88,6 @@ export function Recorder() {
     return (
         <div className='recorder__container'>
             <div className='max-width'>
-
-                {/* <div className="audio-player-container">
-                    <audio
-                        controls
-                        src='/audios/Subscribe_audio.mp3'
-                        onEnded={handleAudioEnded}
-                    >
-                        Your browser does not support the audio element.
-                    </audio>
-                    <p>{audioStatus}</p>
-                </div> */}
-
-
                 <div className="recorder__recording">
                     <div className="audio-playback">
                         <audio ref={audioPlayerRef} controls src={audioURL}></audio>
@@ -127,7 +105,7 @@ export function Recorder() {
                             </button>
                         }
                             
-                        <span className={isRecording ? 'status-recording' : ''}>
+                            <span className='status-message'>
                             {isRecording ?<div className="recording"></div>:''}
                             {statusMessage}
                         </span>

@@ -1,0 +1,36 @@
+.practicePlayer__container {
+    margin-top: 2rem;
+}
+
+.audio-player-container {
+    overflow: hidden;
+    margin-top: 2rem;
+}
+.audio-player-container audio{
+    position: relative;
+    left: -32px;
+    width: calc(100% + 64px);
+}
+
+.practicePlayer__playback audio {
+    background-color: var(--light-grey);
+}
+
+
+.practicePlayer__recording button:disabled {
+    background-color: var(--light-grey); 
+    color: var(--grey);
+    cursor: not-allowed;
+  }
+
+
+.practicePlayer__container .status-message {
+    font-size: 0.8rem;
+    font-style: italic;
+    animation: blink 2s linear infinite;
+}
+
+.practicePlayer__container img {
+    width: 100%;
+    max-width: 300px;
+}

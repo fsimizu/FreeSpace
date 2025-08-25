@@ -38,6 +38,16 @@ export const languages = {
         colorTo: 'var(--white)',
         go: 'Tara na',
         goText: 'Handa ka na ba?'
+    },
+    urdu: {
+        name: 'Urdu',
+        shortName: 'urd',
+        imgUrl: '/images/lang-filipino.png',
+        color: 'var(--green)',
+        colorFrom: 'var(--green)',
+        colorTo: 'var(--white)',
+        go: "Let's go",
+        goText: 'Ready?'
     }
 
 }

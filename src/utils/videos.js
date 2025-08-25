@@ -11,6 +11,9 @@ export const buttons = {
   portuguese: {
     title: 'Portuguese Mock Tests',
   },
+  urdu: {
+    title: 'Urdu Mock Tests',
+  },
   vocabulary: {
     title: 'Vocabulary',
   },

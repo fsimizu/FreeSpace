@@ -54,6 +54,13 @@ export function ResourcesContainer() {
             imgUrl: '/images/lang-portuguese.png',
             icon: <Headset size={18} color={'var(--yellow)'} />
         },
+        urdu: {
+            name: 'urdu',
+            longName: 'Mock tests - Urdu',
+            description: 'Lorem',
+            imgUrl: '/images/lang-portuguese.png',
+            icon: <Headset size={18} color={'var(--yellow)'} />
+        },
     };
 
     return (

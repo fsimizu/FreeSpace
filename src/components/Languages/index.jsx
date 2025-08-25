@@ -21,6 +21,7 @@ export function Languages() {
           <LanguageCard language={languages.portuguese} />
           <LanguageCard language={languages.filipino} />
           <LanguageCard language={languages.french} />
+          <LanguageCard language={languages.urdu} />
 
         </div>
 
